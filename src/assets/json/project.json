@@ -1,0 +1,25 @@
+[
+    {
+        "title":"S-leasing",
+        "image":"/assets/image/image4.png",
+        "description":"ดาวน์โหลดใบกำกับภาษีและใบรับอิเล็กทรอนิกส์",
+        "link":"https://sl.etaxsolution.com"
+    },
+    {
+        "title":"Buyer web portal (Pttor)",
+        "image":"/assets/image/image3.png",
+        "description":"เรียกดูใบกำกับภาษีและใบรับอิเล็กทรอนิกส์",
+        "link":"https://uatpttor-buyer.etaxsolution.com/"
+    },
+    {
+        "title":"E-Tax",
+        "image":"/assets/image/image5.png",
+        "description":"บริการออกใบกำกับภาษีและใบรับอิเล็กทรอนิกส์",
+        "link":"https://uatrbh.etaxsolution.com/"
+    },
+    {
+        "title":"ปลูก ปัก รักษา ล้านต้นบนแผ่นดิน",
+        "image":"/assets/image/image1.png",
+        "link":"https://plant.redcross.or.th/"
+    }
+]

@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Sukhumvit';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(Inter), url(./assets/fonts/sukhumvit/SukhumvitSet-Text.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(Inter), url(./assets/fonts/inter/Inter-Black.ttf) format('truetype')
+}
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    html {
+        @apply font-sukhumvit bg-black text-white 
+    }
+
+}
+
+
+ul li a.active {
+    @apply border-b-2 border-primary
+}
+
+.ul-style::before {
+    content: " ";
+}

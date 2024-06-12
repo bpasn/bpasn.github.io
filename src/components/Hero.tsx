@@ -5,11 +5,11 @@ import { motion, Variants } from 'framer-motion';
 const Hero = () => {
   const variant: Variants = {
     initial: {
-      x: 400,
+      y: -300,
       opacity: 0,
     },
     animate: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         duration: 1,

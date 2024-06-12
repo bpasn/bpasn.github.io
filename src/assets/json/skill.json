@@ -1,0 +1,47 @@
+[
+    {
+        "skill":"Flutter",
+        "image":"/assets/image/flutter.png"
+    },
+    {
+        "skill":"Node.js",
+        "image":"/assets/image/nodejs.png"
+    },
+    {
+        "skill":"Javascript",
+        "image":"/assets/image/js.png"
+    },
+    {
+        "skill":"Typescript",
+        "image":"/assets/image/typescript.png"
+    },
+    {
+        "skill":"HTML & CSS",
+        "image":"/assets/image/html_css.png"
+    },
+    {
+        "skill":"MySql",
+        "image":"/assets/image/Mysql.png"
+    },
+    {
+        "skill":"MSSQL",
+        "image":"/assets/image/mssql-server.png"
+    },
+    {
+        "skill":"React.js",
+        "image":"/assets/image/reactjs.png"
+    },
+    {
+        "skill":"Laravel",
+        "image":"/assets/image/laravel.png"
+    },
+    {
+        "skill":"Docker",
+        "image":"/assets/image/docker.png"
+    },
+    {
+        "skill":"Git",
+        "image":"/assets/image/git.png"
+    }
+   
+]

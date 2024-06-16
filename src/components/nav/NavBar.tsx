@@ -49,7 +49,7 @@ const NavBar = () => {
             label: "About"
         },
         {
-            id: "#skills",
+            id: "#skill",
             label: "My Skills"
         },
         {
@@ -57,6 +57,20 @@ const NavBar = () => {
             label: "Contact"
         },
     ];
+
+    const handleNavClick = (id:string) => {
+        const element:HTMLElement | null = document.getElementById(id.replace("#",""));
+        const headerOffset = 100; // ปรับขนาดตามความสูงของ header ของคุณ
+        const elementPosition = element!.getBoundingClientRect()!.top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+
+        setOpen(false);
+    };
     return (
         <header className="sticky  top-0 z-50 w-full border-b border-border/40 border-gray-800 border-border/40 bg-background/95 backdrop-blur">
             <div className="container h-14 flex max-w-screen-2xl items-center">
@@ -65,11 +79,11 @@ const NavBar = () => {
                         DEV
                     </a>
                 </div>
-                <FaBars onClick={() => setOpen(!open)} className='ml-auto' size={16} />
+                <FaBars onClick={() => setOpen(!open)} className='block md:hidden ml-auto' size={16} />
                 <ul className="ml-auto hidden md:flex md:w-auto text-lg">
                     {
                         menus.map((menu) => (
-                            <li key={menu.id}>
+                            <li key={menu.id} >
                                 <a href={menu.id} className='mr-6 flex items-center  space-x-2 cursor-pointer' >{menu.label}</a>
                             </li>
                         ))
@@ -85,7 +99,10 @@ const NavBar = () => {
                         <motion.ul {...panel} className="flex flex-col items-center justify-center uppercase p-4 h-full text-center text-xl leading-[4rem] ">
                             {
                                 menus.map((menu, index) => (
-                                    <motion.li {...text(index)} onClick={() => setOpen(!open)} key={menu.id} className="p-4">
+                                    <motion.li {...text(index)} onClick={(e) => {
+                                        e.preventDefault();
+                                        handleNavClick(menu.id);
+                                    }} key={menu.id} className="p-4">
                                         <a href={menu.id}>{menu.label}</a>
                                     </motion.li>
                                 ))}

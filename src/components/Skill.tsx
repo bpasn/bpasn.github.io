@@ -32,19 +32,15 @@ const Skill = () => {
 const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
+        translation:{
+            y:20,
+        },
         opacity: 1,
         scale: 1,
         transition: {
-            delayChildren: 0.3,
+            delayChildren: 0.1,
             staggerChildren: .2
         }
-    }
-};
-const item = {
-    hidden: { y: -20, opacity: 0 },
-    visible: {
-        y: 0,
-        opacity: 1
     }
 };
 const createElement = (col: number, items: { skill: string, image: string; }[]): React.JSX.Element[] => {

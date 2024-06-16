@@ -17,8 +17,9 @@ const Hero = () => {
       }
     },
   };
+  
   return (
-    <section id='hero' className='h-screen max-w-[890px]'>
+    <section id='hero' className='mt-50 md:mt-0 h-screen max-w-[1290px]'>
       <div className=" mt-[56px] grid grid-cols-4 gap-2 md:gap-10 place-content-center h-full relative" >
         <motion.div
           animate="animate"

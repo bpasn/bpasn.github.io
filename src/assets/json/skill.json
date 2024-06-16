@@ -8,11 +8,11 @@
         "image":"/assets/image/nodejs.png"
     },
     {
-        "skill":"Javascript",
+        "skill":"JavaScript",
         "image":"/assets/image/js.png"
     },
     {
-        "skill":"Typescript",
+        "skill":"TypeScript",
         "image":"/assets/image/typescript.png"
     },
     {

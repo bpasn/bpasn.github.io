@@ -4,7 +4,7 @@ type Props = {}
 
 const Contact = (props: Props) => {
   return (
-    <section id="contact" >Contact</section>
+    <section id="contact" className='h-screen'>Contact</section>
   )
 }
 

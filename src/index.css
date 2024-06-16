@@ -27,9 +27,13 @@
     }
 
     html {
-        @apply font-sukhumvit bg-black text-white 
+        @apply font-sukhumvit bg-gray-900 text-white scroll-smooth snap-mandatory snap-y 
     }
 
+
+    section {
+        @apply scroll-mt-[56px];
+    }
 }
 
 

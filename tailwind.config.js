@@ -24,6 +24,9 @@ module.exports = {
       xl: "1280px",
     },
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('assets/image/background.jpg')",
+      },
       fontFamily: {
         'sukhumvit': ['Sukhumvit', 'sans-serif'],
         'inter': ['Inter', 'sans-serif']
@@ -33,7 +36,7 @@ module.exports = {
         padding: "2rem",
       },
       colors: {
-        "primary": "#6C63FF"
+        "primary": "#02D66A"
       }
     },
   },

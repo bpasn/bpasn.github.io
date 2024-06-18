@@ -27,9 +27,13 @@
     }
 
     html {
-        @apply font-sukhumvit bg-gray-900 text-white scroll-smooth snap-mandatory snap-y 
+        @apply font-sukhumvit bg-gray-900 text-white scroll-smooth snap-mandatory snap-y
     }
 
+    /* width */
+    ::-webkit-scrollbar {
+        width: 0;
+    }
 
     section {
         @apply scroll-mt-[56px];
@@ -47,4 +51,72 @@ ul.ul-style li.item {
     @apply border-primary;
     list-style: none;
 
+}
+.about-me {
+    @apply relative flex md:m-[8rem]
+}
+.about-me::before {
+    content:" ";
+    @apply absolute hidden md:block w-1/12 border-t-2 top-[1rem] -left-[8rem] border-t-primary
+
+}
+
+.year {
+    @apply border-primary;
+}
+
+.year::after {
+    @apply bg-primary backdrop-blur-lg shadow-md;
+    content: " ";
+    width: 30px;
+    height: 30px;
+    ;
+    position: absolute;
+    right: -15px;
+    top: 10px;
+    border-radius: 100%;
+}
+
+.line {
+    border-right: 1px solid #fff;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-item {
+    @apply gap-5 flex flex-col px-5;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline-item::before {
+    content: "";
+    @apply absolute w-[30px] h-[30px] bg-primary rounded-full left-[0.4rem] top-[0rem] shadow-[rgb(108_212,_186)_3px_3px_30px_10px]
+}
+.timeline-item::after {
+    content: "";
+    @apply absolute w-[1px] h-[100%] bg-white left-[1.25rem] top-[2.5rem]
+}
+
+.timeline-item .date {
+    @apply absolute hidden left-[-8rem] top-0 py-2 px-5 font-bold bg-primary/90 text-white md:inline-block text-center
+    
+}
+
+.timeline-item .date::before{
+    content:'';
+    @apply absolute top-[50%] left-[100%] border-primary/90 border-0 border-t-[19px] border-t-transparent border-l-[19px] border-b-[22px] border-b-transparent  translate-y-[-50%]
+
+}
+
+.label {
+    @apply text-3xl font-bold relative 
+}
+
+.custom-line {
+    height: 1px;
+    @apply bg-primary
 }

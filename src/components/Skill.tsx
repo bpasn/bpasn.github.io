@@ -1,20 +1,19 @@
 import ListCard from '../ui/components/list-card';
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion, useAnimationControls, useInView } from 'framer-motion';
+import React, { RefObject, useEffect, useRef } from 'react';
 import skills from '../assets/json/skill.json';
 const Skill = () => {
+    const ref = useRef(null);
     return (
         <section
             id="skill"
+            ref={ref}
             className='m-[4rem_auto] p-[4rem_0]'
+
         >
-            <motion.div
-                variants={container}
-                initial="hidden"
-                whileInView="visible"
-            >
-                <h1 className="text-white text-4xl font-bold  mb-[5rem] text-center">My Skills</h1>
-                <div className="grid grid-cols-4 gap-5">
+            <h1 className="text-white text-4xl font-bold  mb-[5rem] text-center">My Skills</h1>
+            <FadeInWhenVisible container={ref}>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
                     {preramid().map((element, index) => {
                         return (
                             <div className="col-span-4" key={index}>
@@ -23,18 +22,14 @@ const Skill = () => {
                         );
                     })}
                 </div>
-            </motion.div>
-
+            </FadeInWhenVisible>
 
         </section >
     );
 };
-const container = {
-    hidden: { opacity: 1, scale: 0 },
+const _container = {
+    hidden: { opacity: 1 },
     visible: {
-        translation:{
-            y:20,
-        },
         opacity: 1,
         scale: 1,
         transition: {
@@ -48,7 +43,7 @@ const createElement = (col: number, items: { skill: string, image: string; }[]):
     for (let i: number = 0; i < col; i++) {
         elemenes.push(
             <motion.div whileHover={{ scale: 1.2 }} key={items[i].skill} className='w-full md:w-1/5'>
-                <ListCard id={i} skill={items[i].skill} image={items[i].image} />
+                <ListCard skill={items[i].skill} image={items[i].image} />
             </motion.div>
         );
     }
@@ -90,3 +85,32 @@ const preramid = () => {
     return elements;
 };
 export default Skill;
+
+
+
+const FadeInWhenVisible = ({
+    children,
+    container
+}: {
+    container: RefObject<HTMLElement>
+    children: React.ReactNode
+}) => {
+    const ref = useRef<HTMLDivElement>(null);
+    const inView = useInView(ref, { root: container });
+    const control = useAnimationControls();
+    useEffect(() => {
+        if (inView) {
+            control.start("visible");
+        }
+    }, [inView, control]);
+    return (
+        <motion.div
+            ref={ref}
+            animate={"visible"}
+            initial="hidden"
+            variants={_container}
+        >
+            {children}
+        </motion.div>
+    )
+}

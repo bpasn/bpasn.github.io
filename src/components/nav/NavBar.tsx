@@ -12,21 +12,21 @@ const NavBar = () => {
             opacity: 0
         },
         animate: { y: 0, opacity: 1 },
-        exit: { y: 0, opacity: 0, transition: { delay: 0.2 } },
+        exit: { y: 0, opacity: 0, transition: { delay: 0.1 } },
         transition: { duration: 0.3 },
     };
     const panel = {
         initial: { y: '-100%' },
         animate: { y: 0 },
         exit: { y: '-100%' },
-        transition: { duration: 0.3 },
+        transition: { duration: 0.2 },
     };
     const text = (delay: number) => {
         return {
             initial: { opacity: 0, y: -50 },
             animate: { opacity: 1, y: 0 },
             transition: {
-                delay: 0.5 + delay / 10,
+                delay: 0.2 + delay / 10,
             },
         };
     };
@@ -37,7 +37,21 @@ const NavBar = () => {
         } else {
             document.body.style.overflow = 'auto';
         }
-    }, [open]);
+        if(window.innerWidth > 667){
+            setOpen(false);
+        }
+
+        window.addEventListener("resize",handleResize)
+        return () => {
+            window.removeEventListener("resize",handleResize)
+        }
+    }, [open,window.innerWidth]);
+
+    const handleResize = () => {
+        if(window.innerWidth < 768){
+            setOpen(false);
+        }
+    }
 
     let menus = [
         {
@@ -58,9 +72,9 @@ const NavBar = () => {
         },
     ];
 
-    const handleNavClick = (id:string) => {
-        const element:HTMLElement | null = document.getElementById(id.replace("#",""));
-        const headerOffset = 100; // ปรับขนาดตามความสูงของ header ของคุณ
+    const handleNavClick = (id: string) => {
+        const element: HTMLElement | null = document.getElementById(id.replace("#", ""));
+        const headerOffset = 110; // ปรับขนาดตามความสูงของ header ของคุณ
         const elementPosition = element!.getBoundingClientRect()!.top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 

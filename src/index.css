@@ -52,13 +52,14 @@ ul.ul-style li.item {
     list-style: none;
 
 }
-.about-me {
-    @apply relative flex md:m-[8rem]
-}
-.about-me::before {
-    content:" ";
-    @apply absolute hidden md:block w-1/12 border-t-2 top-[1rem] -left-[8rem] border-t-primary
 
+.about-me {
+    @apply relative flex justify-center items-center max-w-[980px]
+}
+
+.about-me::before {
+    content: " ";
+    @apply absolute hidden md:block w-1/12 border-t-2 top-[1rem] -left-[8rem] border-t-primary
 }
 
 .year {
@@ -87,34 +88,43 @@ ul.ul-style li.item {
 }
 
 .timeline-item {
-    @apply gap-5 flex flex-col pl-5 md:pl-[3rem];
+    @apply gap-5 flex flex-col mdl:pl-[3rem];
     position: relative;
 }
 
 .timeline-item::before {
-    @apply content-[''] absolute w-[30px] h-[30px] bg-primary rounded-full left-[0.4rem] top-[0rem] shadow-[rgb(108_212,_186)_3px_3px_30px_10px]
+    @apply content-[''] absolute w-[30px] h-[30px] bg-primary rounded-full -left-[0.5rem] mdl:left-[0.4rem] top-[0rem]
+}
+
+.timeline-item::before {
+    box-shadow: rgb(108, 212, 186) 3px 3px 30px 5px;
 }
 
 .timeline-item::after {
-    @apply content-[''] absolute w-[1px] h-[100%] bg-white left-[1.25rem] top-[2.5rem]
+    @apply content-[''] absolute w-[1px] h-[100%] bg-white left-[0.25rem] mdl:left-[1.25rem] top-[2.5rem]
 }
 
 
 .timeline-item .date {
-    @apply absolute hidden mdl:inline-block left-[-7rem] -top-1 py-1 px-3 text-lg font-bold  bg-primary/80 text-white  text-center
-    
+    @apply absolute hidden mdl:inline-block left-[-7rem] -top-1 py-1 px-3 text-lg font-bold bg-primary/80 text-white text-center
 }
 
 .timeline-item .date::before {
-    @apply content-[''] absolute top-[50%] left-[100%] border-primary/80   border-0 border-t-transparent border-t-[18px]  border-l-[18px] border-b-[18px] border-b-transparent  translate-y-[-50%]
-
+    @apply content-[''] absolute top-[50%] left-[100%] border-primary/80 border-0 border-t-transparent border-t-[18px] border-l-[18px] border-b-[18px] border-b-transparent translate-y-[-50%]
 }
 
 .label {
-    @apply text-3xl font-bold relative 
+    @apply text-3xl font-bold relative
 }
 
 .custom-line {
-    height: 1px;
-    @apply bg-primary
+    @apply bg-primary h-[1px];
+}
+
+.contact-social {
+    @apply md:col-span-2 border-none rounded-md p-3 shadow-md bg-gray-700 gap-3 flex items-center justify-center
+}
+
+.contact-social strong {
+    @apply hidden md:block
 }

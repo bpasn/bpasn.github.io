@@ -37,18 +37,18 @@ const NavBar = () => {
         } else {
             document.body.style.overflow = 'auto';
         }
-        if(window.innerWidth > 667){
+        if (window.innerWidth > 667) {
             setOpen(false);
         }
 
-        window.addEventListener("resize",handleResize)
+        window.addEventListener("resize", handleResize)
         return () => {
-            window.removeEventListener("resize",handleResize)
+            window.removeEventListener("resize", handleResize)
         }
-    }, [open,window.innerWidth]);
+    }, [open, window.innerWidth]);
 
     const handleResize = () => {
-        if(window.innerWidth < 768){
+        if (window.innerWidth < 768) {
             setOpen(false);
         }
     }
@@ -108,9 +108,15 @@ const NavBar = () => {
             <AnimatePresence>
                 {open ? (
                     <motion.div
+                        {...text(0)}
                         {...sideBarBg}
                         className={`h-screen w-screen overflow-hidden fixed right-0 bg-gray-900 top-0  border-r border-r-gray-900`}>
-                        <motion.ul {...panel} className="flex flex-col items-center justify-center uppercase p-4 h-full text-center text-xl leading-[4rem] ">
+                        <motion.div
+                            className="container h-14 flex max-w-screen-2xl items-center">
+                            <div className="ml-auto"><MdClose size={32} onClick={() => setOpen(false)} /></div>
+                        </motion.div>
+                        <motion.ul {...panel} className="flex flex-col items-center uppercase p-4 h-full text-center text-xl leading-[4rem] ">
+
                             {
                                 menus.map((menu, index) => (
                                     <motion.li {...text(index)} onClick={(e) => {
@@ -120,10 +126,6 @@ const NavBar = () => {
                                         <a href={menu.id}>{menu.label}</a>
                                     </motion.li>
                                 ))}
-                            <motion.li {...text(menus.length + 1)} className="p-4 mt-auto">
-                                <MdClose size={32} onClick={() => setOpen(false)} />
-                            </motion.li>
-
                         </motion.ul>
                     </motion.div>
                 ) : null}

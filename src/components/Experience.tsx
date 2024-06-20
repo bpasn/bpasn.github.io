@@ -27,11 +27,11 @@ const experience: IExperience[] = [
 ];
 const Experience = (props: Props) => {
     return (
-        <section className=' container' id='experience'>
+        <section className='md:container px-[1rem] md:mx-auto max-w-[1024px] mx-auto' id='experience'>
             <h1 className="text-5xl">Experience</h1>
             <div className="flex justify-center mdl:pl-[7rem]">
-                <ul className="timeline container flex flex-col items-center justify-end m-[8rem_0_2rem_0] gap-[5rem] max-w-[1024px]">
-                    {experience.map((item) => (<ListExperience {...item} />))}
+                <ul className="timeline container flex flex-col items-center justify-end m-[8rem_0_2rem_0] gap-[5rem] max-w-[768px]">
+                    {experience.map((item) => (<ListExperience key={item.company} {...item} />))}
                 </ul>
             </div>
         </section>

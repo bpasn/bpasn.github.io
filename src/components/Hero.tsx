@@ -5,11 +5,11 @@ import { motion, Variants } from 'framer-motion';
 const Hero = () => {
   const variant: Variants = {
     initial: {
-      y: -300,
+      x: -300,
       opacity: 0,
     },
     animate: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: {
         duration: 1,
@@ -17,12 +17,14 @@ const Hero = () => {
       }
     },
   };
+  
+
 
   return (
-    <section id='hero' className='container relative'>
-      <div className="scroll-mt-[100px] grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-10 h-full place-content-center] relative" >
+    <section id='hero' className='relative md:container px-[1rem] md:mx-auto'>
+      <div className="scroll-mt-[100px] grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-10 h-full place-content-center relative" >
         <motion.div
-          animate="animate"
+          whileInView="animate"
           variants={variant}
           initial="initial"
           className=' relative col-span-4 md:col-span-2 self-center order-2'>
@@ -46,9 +48,9 @@ const Hero = () => {
           <motion.p
             variants={variant}
             className="text-[30px] md:text-7xl text-wrap row-span-2 md:mt-[2rem]">
-            Web developer and UI designer
+            Web developer
           </motion.p>
-          <Button text='See the  lastes workes' onClick={() => {
+          <Button text='Download Resume' onClick={() => {
             window.location.href = '/#experience'
           }} className='mt-5 md:mt-10' />
         </motion.div>

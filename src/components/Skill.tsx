@@ -9,11 +9,10 @@ const Skill = () => {
             id="skill"
             ref={ref}
             className='m-[4rem_auto] p-[4rem_0]'
-
         >
             <h1 className="text-white text-4xl font-bold  mb-[5rem] text-center">My Skills</h1>
-            <FadeInWhenVisible container={ref}>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+            <FadeInWhenVisible container={ref} >
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-[960px] place-content-center mx-auto">
                     {preramid().map((element, index) => {
                         return (
                             <div className="col-span-4" key={index}>
@@ -34,7 +33,7 @@ const _container = {
         scale: 1,
         transition: {
             delayChildren: 0.1,
-            staggerChildren: .2
+            staggerChildren: .1
         }
     }
 };
@@ -42,7 +41,7 @@ const createElement = (col: number, items: { skill: string, image: string; }[]):
     let elemenes: React.JSX.Element[] = [];
     for (let i: number = 0; i < col; i++) {
         elemenes.push(
-            <motion.div whileHover={{ scale: 1.2 }} key={items[i].skill} className='w-full md:w-1/5'>
+            <motion.div whileHover={{ scale: 1.2, zIndex: 10 }} key={items[i].skill} className='w-full md:w-1/5'>
                 <ListCard skill={items[i].skill} image={items[i].image} />
             </motion.div>
         );
@@ -106,7 +105,7 @@ const FadeInWhenVisible = ({
     return (
         <motion.div
             ref={ref}
-            animate={"visible"}
+            whileInView={"visible"}
             initial="hidden"
             variants={_container}
         >

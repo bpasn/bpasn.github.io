@@ -1,34 +1,73 @@
 import React from 'react'
+import { MdOutlineMail } from 'react-icons/md';
+import { FiPhone } from 'react-icons/fi';
+import { IoLocationOutline } from 'react-icons/io5';
+import { FaLine } from "react-icons/fa6";
+import { IconType } from 'react-icons';
 
-type Props = {}
 
-const Contact = (props: Props) => {
+const Contact = () => {
+  const handleTrigger = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
+    const popoverContent = document.getElementById('popoverContent');
+    popoverContent!.classList.toggle('hidden');
+    if (!popoverContent!.classList.contains("hidden")) {
+      const spanRec = e.currentTarget.getBoundingClientRect();
+      popoverContent!.style.top = `${popoverContent!.style.top + window.scrollY}px`;
+      popoverContent!.style.left = `${popoverContent!.style.left}px`;
+    }
+  };
+  const contactSocial: { icon: IconType, text: string, href: string | undefined }[] = [
+    {
+      icon: MdOutlineMail,
+      text: "pirunporn02@gmail.com",
+      href: "mailto:pirunporn02@gmail.com"
+    },
+    {
+      icon: FiPhone,
+      text: "095-879-0289",
+      href: "tel:095-879-0289"
+    },
+    {
+      icon: IoLocationOutline,
+      text: "Bankok, Phasi charoen",
+      href: ""
+    },
+    {
+      icon: FaLine,
+      text: "boyweihey",
+      href: "https://line.me/R/ti/p/~boyweihey"
+    },
+  ];
+
   return (
-    <section id="contact" className='m-[4rem_auto] p-[4rem_0] text-primary'>
+    <section id="contact" className='m-[4rem_0_0_0] p-[4rem_0_0_0]'>
       <div className="flex flex-col items-center py-10">
         <div className="flex items-center w-full  px-4">
           <div className="flex-grow custom-line"></div>
-          <h2 className="px-4 text-5xl font-bold">Contact Me</h2>
+          <h2 className="px-4 text-2xl md:text-5xl font-bold">Contact Me</h2>
           <div className="flex-grow custom-line"></div>
         </div>
-        <div className="grid grid-cols-4 place-content-center gap-5">
-            <span className="material-icons col-span-2">facebook</span>
-            <span className="material-icons col-span-2 ">twitter</span>
-            <span className="material-icons col-start-2">linkedin</span>
-          </div>
-        <div className="mt-6 flex items-center w-full max-w-4xl px-4">
-          <div className="flex-grow custom-line"></div>
-          <div className="flex space-x-4 px-4">
-            <span className="material-icons">facebook</span>
-            <span className="material-icons">twitter</span>
-            <span className="material-icons">linkedin</span>
-            <span className="material-icons">whatsapp</span>
-          </div>
-          <div className="flex-grow custom-line"></div>
+        <div className=" relative grid grid-cols-4 place-content-center text-center gap-10 mt-10 p-5 mx-auto">
+          {contactSocial.map(element => (
+            element.href ? (
+              <a href={element.href ? element.href : ""} key={element.href} className='contact-social'>
+                <code>
+                  <element.icon size={22} />
+                </code>
+                <strong>{element.text}</strong>
+              </a>) : (
+              <a  key={element.href} className='contact-social'>
+                <code>
+                  <element.icon size={22} />
+                </code>
+                <strong>{element.text}</strong>
+              </a>
+            )
+          ))}
         </div>
 
-        <div className="mt-6">
-          <p className="italic text-xl">“Thanks for Scrolling”</p>
+        <div className="mt-6  text-center w-full  px-4">
+          <code>“Thanks for Scrolling”</code>
         </div>
       </div>
     </section>

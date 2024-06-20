@@ -5,7 +5,7 @@ import Project from './Project'
 
 const Portfolito = () => {
   return (
-    <section id='portfolito' className='container'>
+    <section id='portfolito' className='md:container px-[1rem] md:mx-auto'>
         <About />
         <Skill/>
         <Project/>

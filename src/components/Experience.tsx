@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
+type Props = {};
 interface IExperience {
     date: string;
     position: string;
@@ -28,27 +28,27 @@ const Experience = (props: Props) => {
     return (
         <section className=' container'>
             <h1 className="text-5xl">Experience</h1>
-            <div className="flex justify-center">
-                <ul className="timeline container flex flex-col items-center justify-center m-[8rem_0_2rem_0] gap-[5rem] max-w-[980px]">
+            <div className="flex justify-center mdl:pl-[7rem]">
+                <ul className="timeline container flex flex-col items-center justify-end m-[8rem_0_2rem_0] gap-[5rem] max-w-[1024px]">
                     {experience.map((item) => (<ListExperience {...item} />))}
                 </ul>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Experience
+export default Experience;
 
 const ListExperience = (item: IExperience) => {
     return (
         <li className="timeline-item">
-            <div className="date mr-10">{item.date}</div>
+            <div className="date">{item.date}</div>
             <div className='ml-10'>
-                <h3 className="font-bold text-xl">{item.position}</h3>
+                <h3 className="font-bold text-2xl">{item.position}</h3>
                 <p className="text-gray-400">{item.company}</p>
-                <p className="text-gray-400 md:hidden block">{item.date} - {item.end}</p>
-                <p>{item.description}</p>
+                <p className="text-gray-400 xl:hidden block">{item.date} - {item.end}</p>
+                <p className='text-xl'>{item.description}</p>
             </div>
         </li>
-    )
-}
+    );
+};

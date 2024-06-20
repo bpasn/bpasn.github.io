@@ -87,28 +87,26 @@ ul.ul-style li.item {
 }
 
 .timeline-item {
-    @apply gap-5 flex flex-col px-5;
+    @apply gap-5 flex flex-col pl-5 md:pl-[3rem];
     position: relative;
-    padding-left: 3rem;
 }
 
 .timeline-item::before {
-    content: "";
-    @apply absolute w-[30px] h-[30px] bg-primary rounded-full left-[0.4rem] top-[0rem] shadow-[rgb(108_212,_186)_3px_3px_30px_10px]
-}
-.timeline-item::after {
-    content: "";
-    @apply absolute w-[1px] h-[100%] bg-white left-[1.25rem] top-[2.5rem]
+    @apply content-[''] absolute w-[30px] h-[30px] bg-primary rounded-full left-[0.4rem] top-[0rem] shadow-[rgb(108_212,_186)_3px_3px_30px_10px]
 }
 
+.timeline-item::after {
+    @apply content-[''] absolute w-[1px] h-[100%] bg-white left-[1.25rem] top-[2.5rem]
+}
+
+
 .timeline-item .date {
-    @apply absolute hidden left-[-8rem] top-0 py-2 px-5 font-bold bg-primary/90 text-white md:inline-block text-center
+    @apply absolute hidden mdl:inline-block left-[-7rem] -top-1 py-1 px-3 text-lg font-bold  bg-primary/80 text-white  text-center
     
 }
 
-.timeline-item .date::before{
-    content:'';
-    @apply absolute top-[50%] left-[100%] border-primary/90 border-0 border-t-[19px] border-t-transparent border-l-[19px] border-b-[22px] border-b-transparent  translate-y-[-50%]
+.timeline-item .date::before {
+    @apply content-[''] absolute top-[50%] left-[100%] border-primary/80   border-0 border-t-transparent border-t-[18px]  border-l-[18px] border-b-[18px] border-b-transparent  translate-y-[-50%]
 
 }
 

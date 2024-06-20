@@ -19,8 +19,8 @@ const Hero = () => {
   };
 
   return (
-    <section id='hero' className='container h-screen'>
-      <div className="scroll-mt-[100px] grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-10 place-content-center  h-full relative" >
+    <section id='hero' className='container relative'>
+      <div className="scroll-mt-[100px] grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-10 h-full place-content-center] relative" >
         <motion.div
           animate="animate"
           variants={variant}
@@ -49,7 +49,7 @@ const Hero = () => {
             Web developer and UI designer
           </motion.p>
           <Button text='See the  lastes workes' onClick={() => {
-            window.location.href = '/#about'
+            window.location.href = '/#experience'
           }} className='mt-5 md:mt-10' />
         </motion.div>
       </div>

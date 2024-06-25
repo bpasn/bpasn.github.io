@@ -25,9 +25,9 @@
         box-sizing: border-box;
 
     }
-
+/*  scroll-smooth snap-mandatory snap-y */
     html {
-        @apply font-sukhumvit bg-gray-900 text-white scroll-smooth snap-mandatory snap-y
+        @apply font-sukhumvit bg-gray-900 text-white
     }
 
     /* width */
@@ -35,9 +35,9 @@
         width: 0;
     }
 
-    section {
+    /* section {
         @apply scroll-mt-[56px];
-    }
+    } */
 }
 
 

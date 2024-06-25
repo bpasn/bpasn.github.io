@@ -40,8 +40,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className='m-[4rem_0_0_0] p-[4rem_0_0_0]'>
-      <div className="flex flex-col items-center py-10">
+    <section id="contact" className='relative m-[4rem_0_0_0] p-[4rem_0_0_0] h-screen'>
+      <div className="flex flex-col items-center justify-center py-10 h-full mt-auto">
         <div className="flex items-center w-full  px-4">
           <div className="flex-grow custom-line"></div>
           <h2 className="px-4 text-2xl md:text-5xl font-bold">Contact Me</h2>
@@ -56,7 +56,7 @@ const Contact = () => {
                 </code>
                 <strong>{element.text}</strong>
               </a>) : (
-              <a  key={element.href} className='contact-social'>
+              <a key={element.href} className='contact-social'>
                 <code>
                   <element.icon size={22} />
                 </code>
@@ -65,7 +65,11 @@ const Contact = () => {
             )
           ))}
         </div>
-
+        <div className="flex items-center w-full  px-4">
+          <div className="flex-grow custom-line"></div>
+          <h2 className="px-4 text-2xl md:text-5xl font-bold">Contact Me</h2>
+          <div className="flex-grow custom-line"></div>
+        </div>
         <div className="mt-6  text-center w-full  px-4">
           <code>“Thanks for Scrolling”</code>
         </div>

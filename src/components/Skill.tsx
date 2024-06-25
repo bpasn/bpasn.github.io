@@ -8,20 +8,21 @@ const Skill = () => {
         <section
             id="skill"
             ref={ref}
-            className='m-[4rem_auto] p-[4rem_0]'
+            className='relative m-[4rem_auto] p-[4rem_0]'
         >
             <h1 className="text-white text-4xl font-bold  mb-[5rem] text-center">My Skills</h1>
-            <FadeInWhenVisible container={ref} >
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-[960px] place-content-center mx-auto">
-                    {preramid().map((element, index) => {
-                        return (
-                            <div className="col-span-4" key={index}>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-[960px] place-content-center mx-auto">
+                {preramid().map((element, index) => {
+                    return (
+                        <div className="col-span-4" key={index}>
+                            <FadeInWhenVisible container={ref} >
                                 {element}
-                            </div>
-                        );
-                    })}
-                </div>
-            </FadeInWhenVisible>
+                            </FadeInWhenVisible>
+                        </div>
+                    );
+                })}
+            </div>
 
         </section >
     );
@@ -58,7 +59,7 @@ const preramid = () => {
     for (let inx: number = 0; inx < rows; inx++) {
         if (inx < rows - 2) {
             elements.push(
-                <motion.div className="grid grid-cols-2 md:flex md:justify-center md:flex-wrap gap-5">
+                <motion.div id='' className="element-skill grid grid-cols-2 md:flex md:justify-center md:flex-wrap gap-5">
                     {createElement(4, skills.slice(start, cols))}
                 </motion.div>
             );
@@ -66,18 +67,18 @@ const preramid = () => {
             cols += 4;
         } else if (inx === rows - 2) {
             elements.push(
-                <div className="grid grid-cols-2  md:flex md:justify-center flex-wrap gap-5">
+                <motion.div className="grid grid-cols-2  md:flex md:justify-center flex-wrap gap-5">
                     {createElement(3, skills.slice(start, cols - 1))}
-                </div>
+                </motion.div>
             );
             start += 3;
             cols += 3;
         } else if (inx === rows - 1) {
             if (skills.slice(start, cols - 2).length <= 0) break;
             elements.push(
-                <div className="grid grid-cols-2 md:flex md:justify-center flex-wrap gap-5">
+                <motion.div className="grid grid-cols-2 md:flex md:justify-center flex-wrap gap-5">
                     {createElement(2, skills.slice(start, cols - 2))}
-                </div>
+                </motion.div>
             );
         }
     }
@@ -101,6 +102,7 @@ const FadeInWhenVisible = ({
         if (inView) {
             control.start("visible");
         }
+        
     }, [inView, control]);
     return (
         <motion.div

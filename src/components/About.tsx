@@ -22,7 +22,7 @@ const About = () => {
         whileInView="animate"
         initial="initial"
         id="about"
-        className='container m-auto p-[8rem_1rem_0_1rem] w-full'
+        className='container relative m-auto p-[8rem_1rem_0_1rem] w-full'
       >
         <motion.h1 className="text-white text-4xl font-bold  mb-8">About</motion.h1>
         <motion.ul className='relative ul-style flex gap-2 justify-center'>

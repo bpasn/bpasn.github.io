@@ -2,6 +2,7 @@ import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FaBars } from 'react-icons/fa';
 import { MdClose } from "react-icons/md";
+import { Link } from 'react-scroll';
 
 const NavBar = () => {
     const [open, setOpen] = React.useState(false);
@@ -26,7 +27,7 @@ const NavBar = () => {
             initial: { opacity: 0, y: -50 },
             animate: { opacity: 1, y: 0 },
             transition: {
-                delay: 0.2 + delay / 10,
+                delay: .2 + delay / 10,
             },
         };
     };
@@ -55,26 +56,30 @@ const NavBar = () => {
 
     let menus = [
         {
-            id: "#hero",
+            id: "hero",
             label: "Home"
         },
         {
-            id: "#about",
+            id: "about",
             label: "About"
         },
         {
-            id: "#skill",
+            id: "skill",
             label: "My Skills"
         },
         {
-            id: "#contact",
+            id: "experience",
+            label: "Experience"
+        },
+        {
+            id: "contact",
             label: "Contact"
         },
     ];
 
     const handleNavClick = (id: string) => {
         const element: HTMLElement | null = document.getElementById(id.replace("#", ""));
-        const headerOffset = 110; // ปรับขนาดตามความสูงของ header ของคุณ
+        const headerOffset = 110;
         const elementPosition = element!.getBoundingClientRect()!.top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -87,18 +92,18 @@ const NavBar = () => {
     };
     return (
         <header className="sticky  top-0 z-50 w-full border-b border-border/40 border-gray-800 border-border/40 bg-background/95 backdrop-blur">
-            <div className="container h-14 flex max-w-screen-2xl items-center">
+            <div className="px-2 mx-2 md:container h-14 flex max-w-screen-2xl items-center">
                 <div className="mr-4 md:flex">
                     <a href='#hero' className='text-3xl font-bold tracking-[0.3em] text-white mr-6 flex items-center w-10 h-10 space-x-2 cursor-pointer' >
                         DEV
                     </a>
                 </div>
-                <FaBars onClick={() => setOpen(!open)} className='block md:hidden ml-auto' size={16} />
+                <FaBars onClick={() => setOpen(!open)} className='block md:hidden ml-auto' size={22} />
                 <ul className="ml-auto hidden md:flex md:w-auto text-lg">
                     {
-                        menus.map((menu) => (
+                        menus.map((menu, index) => (
                             <li key={menu.id} >
-                                <a href={menu.id} className='mr-6 flex items-center  space-x-2 cursor-pointer' >{menu.label}</a>
+                                <Link to={menu.id} smooth duration={500}  offset={ -57} className='mr-6 flex items-center  space-x-2 cursor-pointer' >{menu.label}</Link>
                             </li>
                         ))
                     }
@@ -112,7 +117,7 @@ const NavBar = () => {
                         {...sideBarBg}
                         className={`h-screen w-screen overflow-hidden fixed right-0 bg-gray-900 top-0  border-r border-r-gray-900`}>
                         <motion.div
-                            className="container h-14 flex max-w-screen-2xl items-center">
+                            className="h-14 mx-2 flex max-w-screen-2xl items-center">
                             <div className="ml-auto"><MdClose size={32} onClick={() => setOpen(false)} /></div>
                         </motion.div>
                         <motion.ul {...panel} className="flex flex-col items-center uppercase p-4 h-full text-center text-xl leading-[4rem] ">

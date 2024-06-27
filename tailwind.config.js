@@ -16,16 +16,15 @@ module.exports = {
     screens: {
       xs: "320px",
       sm: "375px",
-      sml: "500px",
-      md: "667px",
+      md: "576px",
       mdl: "768px",
-      lg: "960px",
+      lg: "992px",
       lgl: "1024px",
-      xl: "1280px",
+      xl: "1200px",
     },
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('assets/image/background.jpg')",
+        'hero-pattern': "url('assets/image/blob-haikei.svg')",
       },
       fontFamily: {
         'sukhumvit': ['Sukhumvit', 'sans-serif'],
@@ -33,19 +32,27 @@ module.exports = {
       },
       container: {
         center: true,
-        padding: "2rem",
+        padding: "1rem",
+        
         screens: {
-          sm:"357px",
           md: "667px",
           mdl: "768px",
           lg: "960px",
-          lgl: "1024px",
-          xl: "1280px",
-          "2xl": "1440px"
+          lgl: "1000px",
         }
       },
       colors: {
         "primary": "#02D66A"
+      },
+      keyframes:{
+        scrolling: {
+          '0%,20%,50%,80%,100%': {transform:'translateY(0)'},
+          '40%':{transform:'translateY(-20px)'},
+          '60%':{transform:'translateY(-10px)'},
+        }
+      },
+      animation:{
+        "hero-scrolling": 'scrolling 2s linear infinite'
       }
     },
   },

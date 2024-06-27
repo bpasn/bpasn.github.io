@@ -1,0 +1,33 @@
+.card {
+    /* --tw-shadow: 0 5px 15px -3px rgba(0 0 0 0.1) 0 4px 6px -2px rgba(0 0 0 0.5);
+    --tw-shadow-colored: 0 5px 15px -3px var(--tw-shadow-color);
+    box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); */
+    @apply grid grid-cols-1 mdl:grid-cols-2 rounded-xl border-b-0 pb-[2rem] mb-[4rem]  mdl:mb-[4rem] mdl:pb-[0rem] gap-[2rem] overflow-hidden shadow-[0_5px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-2px_rgba(0,0,0,0.05)]
+}
+
+.card-left {
+    @apply justify-self-center h-full
+}
+.card-left img {
+    object-fit: cover;
+}
+
+.card-right {
+    @apply flex flex-col justify-center items-center mdl:items-start mdl:mt-[1rem]  text-gray-900
+}
+.card-right h4 {
+    @apply text-[1.5rem] font-[400]
+}
+.card-right p {
+    @apply font-[400] max-w-[95%] mt-[10px] mb-[1rem] text-center text-[rgba(0,0,0,0.815)] mdl:text-start
+}
+.tech-card-container {
+    @apply flex flex-wrap justify-center mdl:justify-start
+}
+.tech-card-container .tech-stack {
+    @apply rounded-md bg-[#f5f5f5]  p-[5px_10px] m-[5px]  flex items-center justify-center  text-[15px] font-[400] text-[rgba(0,0,0,0.815)] cursor-default shadow-[0_2px_5px_rgba(160,170,180,.6)]
+}
+.btn-group {
+    @apply h-[70px] flex items-center gap-2
+}

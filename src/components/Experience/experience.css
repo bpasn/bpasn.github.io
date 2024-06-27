@@ -1,0 +1,33 @@
+.year {
+    @apply border-primary;
+}
+
+.year::after {
+    @apply bg-primary backdrop-blur-lg shadow-md content-[''] w-[30px] h-[30px] absolute -right-[15px] top-[10px] rounded-full;
+}
+
+.timeline {
+    @apply  list-none p-0;
+}
+
+.timeline-item {
+    @apply relative gap-5 flex flex-col mdl:pl-[3rem];
+}
+
+.timeline-item::before {
+    @apply content-[''] absolute w-[30px] h-[30px] bg-primary rounded-full -left-[1.5rem] mdl:left-[0.4rem] top-[0rem] shadow-[rgb(108,212,186)_3px_3px_30px_5px]
+}
+
+
+.timeline-item::after {
+    @apply content-[''] absolute w-[1px] h-[100%] bg-primary/45 -left-[0.55rem] mdl:left-[1.25rem] top-[2.5rem]
+}
+
+
+.timeline-item .date {
+    @apply absolute hidden mdl:inline-block left-[-7rem] -top-1 py-1 px-3 text-lg font-bold bg-primary/80 text-white text-center
+}
+
+.timeline-item .date::before {
+    @apply content-[''] absolute top-[50%] left-[100%] border-primary/80 border-0 border-t-transparent border-t-[18px] border-l-[18px] border-b-[18px] border-b-transparent translate-y-[-50%]
+}

@@ -18,28 +18,84 @@
     src: local(Inter), url(./assets/fonts/inter/Inter-Black.ttf) format('truetype')
 }
 
-@layer base {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-
-    }
-/*  scroll-smooth snap-mandatory snap-y */
-    html {
-        @apply font-sukhumvit bg-gray-900 text-white
-    }
-
-    /* width */
-    ::-webkit-scrollbar {
-        width: 0;
-    }
-
-    /* section {
-        @apply scroll-mt-[56px];
-    } */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
+img,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply font-sukhumvit bg-[#fafaff] text-white
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    transition: 0.2s ease-in;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+.btn {
+    @apply rounded-md cursor-pointer transition-all duration-300 ease-in-out font-[400] outline-none
+}
+
+.btn-secondary {
+    @apply p-[10px_18px] border-[2px_solid_rgb(57,134,250)] text-[#010606] mr-[1rem]
+}
+
+.btn-shadow {
+    @apply shadow-[0_2px_5px_rgba(160,170,180,0.6)] hover:shadow-[0_2px_8px_rgba(160,170,180,0.6)]
+}
+
+.btn-primary {
+    @apply p-[10px_18px] border-none bg-primary text-white hover:bg-primary/80
+}
+
+.sectionTitle {
+    @apply text-[28px] text-[#151418] font-[700] mb-[3.5rem]
+}
+
+.big-card {
+    @apply relative px-[2rem]  py-[2rem] rounded-md flex flex-col bg-[#fff] shadow-md;
+}
+
+.warpper-content {
+    @apply mt-[5rem] text-[rgba(0,0,0,0.815)]
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
 
 ul li a.active {
     @apply border-b-2 border-primary
@@ -53,76 +109,13 @@ ul.ul-style li.item {
 
 }
 
-.about-me {
-    @apply relative flex justify-center items-center max-w-[980px]
-}
-
-.about-me::before {
-    content: " ";
-    @apply absolute hidden md:block w-1/12 border-t-2 top-[1rem] -left-[8rem] border-t-primary
-}
-
-.year {
-    @apply border-primary;
-}
-
-.year::after {
-    @apply bg-primary backdrop-blur-lg shadow-md;
-    content: " ";
-    width: 30px;
-    height: 30px;
-    ;
-    position: absolute;
-    right: -15px;
-    top: 10px;
-    border-radius: 100%;
-}
-
-.line {
-    border-right: 1px solid #fff;
-}
-
-.timeline {
-    list-style: none;
-    padding: 0;
-}
-
-.timeline-item {
-    @apply gap-5 flex flex-col mdl:pl-[3rem];
-    position: relative;
-}
-
-.timeline-item::before {
-    @apply content-[''] absolute w-[30px] h-[30px] bg-primary rounded-full -left-[0.5rem] mdl:left-[0.4rem] top-[0rem]
-}
-
-.timeline-item::before {
-    box-shadow: rgb(108, 212, 186) 3px 3px 30px 5px;
-}
-
-.timeline-item::after {
-    @apply content-[''] absolute w-[1px] h-[100%] bg-white left-[0.25rem] mdl:left-[1.25rem] top-[2.5rem]
-}
-
-
-.timeline-item .date {
-    @apply absolute hidden mdl:inline-block left-[-7rem] -top-1 py-1 px-3 text-lg font-bold bg-primary/80 text-white text-center
-}
-
-.timeline-item .date::before {
-    @apply content-[''] absolute top-[50%] left-[100%] border-primary/80 border-0 border-t-transparent border-t-[18px] border-l-[18px] border-b-[18px] border-b-transparent translate-y-[-50%]
-}
-
-.label {
-    @apply text-3xl font-bold relative
-}
 
 .custom-line {
     @apply bg-primary h-[1px];
 }
 
 .contact-social {
-    @apply md:col-span-2 border-none rounded-md p-3 shadow-md bg-gray-700 gap-3 flex items-center justify-center
+    @apply md:col-span-2 border-none rounded-md p-3 shadow-md btn-secondary gap-3 flex items-center justify-center
 }
 
 .contact-social strong {

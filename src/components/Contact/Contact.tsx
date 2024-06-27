@@ -4,18 +4,9 @@ import { FiPhone } from 'react-icons/fi';
 import { IoLocationOutline } from 'react-icons/io5';
 import { FaLine } from "react-icons/fa6";
 import { IconType } from 'react-icons';
-
+import './contact.css'
 
 const Contact = () => {
-  const handleTrigger = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
-    const popoverContent = document.getElementById('popoverContent');
-    popoverContent!.classList.toggle('hidden');
-    if (!popoverContent!.classList.contains("hidden")) {
-      const spanRec = e.currentTarget.getBoundingClientRect();
-      popoverContent!.style.top = `${popoverContent!.style.top + window.scrollY}px`;
-      popoverContent!.style.left = `${popoverContent!.style.left}px`;
-    }
-  };
   const contactSocial: { icon: IconType, text: string, href: string | undefined }[] = [
     {
       icon: MdOutlineMail,
@@ -40,17 +31,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className='relative m-[4rem_0_0_0] p-[4rem_0_0_0] h-screen'>
-      <div className="flex flex-col items-center justify-center py-10 h-full mt-auto">
-        <div className="flex items-center w-full  px-4">
-          <div className="flex-grow custom-line"></div>
-          <h2 className="px-4 text-2xl md:text-5xl font-bold">Contact Me</h2>
-          <div className="flex-grow custom-line"></div>
-        </div>
+    <section id="contact" className='warpper-content'>
+      <div className="container flex flex-col  py-10 h-full mt-auto">
+        <h2 className="sectionTitle mb-[0_!important] px-2">Contact Me</h2>
+
         <div className=" relative grid grid-cols-4 place-content-center text-center gap-10 mt-10 p-5 mx-auto">
           {contactSocial.map(element => (
             element.href ? (
-              <a href={element.href ? element.href : ""} key={element.href} className='contact-social'>
+              <a href={element.href ? element.href : ""} key={element.href} className='contact-social border-primary'>
                 <code>
                   <element.icon size={22} />
                 </code>
@@ -65,11 +53,7 @@ const Contact = () => {
             )
           ))}
         </div>
-        <div className="flex items-center w-full  px-4">
-          <div className="flex-grow custom-line"></div>
-          <h2 className="px-4 text-2xl md:text-5xl font-bold">Contact Me</h2>
-          <div className="flex-grow custom-line"></div>
-        </div>
+
         <div className="mt-6  text-center w-full  px-4">
           <code>“Thanks for Scrolling”</code>
         </div>

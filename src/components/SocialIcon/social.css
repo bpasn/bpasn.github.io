@@ -1,0 +1,11 @@
+.social-icon {
+    @apply lg:fixed lg:top-[48%] lg:left-[1.5rem] transform -translate-y-[50%] mt-[2rem] relative top-0 left-0 z-10
+}
+
+.social-icon ul {
+    @apply flex flex-row gap-5 lg:flex-col justify-center items-center list-none;
+}
+
+.social-icon a {
+    @apply text-[2.3rem] text-[rgb(119,119,121)] hover:text-[rgb(57,250,105)]
+}

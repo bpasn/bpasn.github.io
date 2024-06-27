@@ -1,0 +1,19 @@
+.hero-container {
+    @apply pb-[2rem] pt-[4rem] pr-[1rem] pl-[1rem] mr-auto ml-auto flex flex-col md:max-w-[540px] mdl:max-w-[720px] lg:max-w-[960px] xl:max-w-[1000px]
+}
+
+.hero-wrapper {
+    @apply flex flex-col lg:flex-row
+}
+
+.hero-left {
+    @apply flex flex-col justify-center items-center text-left flex-1 mdl:text-center mdl:items-start mdl:mb-[2rem]
+}
+
+.hero-left h1 {
+    @apply text-[2.8rem] opacity-[.98] font-[400] text-[#f6f6f6]
+}
+
+.hero-left h5 {
+    @apply text-[1.6rem] mb-[1rem] font-[400] mdl:min-h-[5rem] text-[rgb(119_119_121)]
+}

@@ -59,7 +59,7 @@ const NavBar = () => {
             id: "about",
             label: "About"
         },
-        
+
         {
             id: "experience",
             label: "Experience"
@@ -101,7 +101,7 @@ const NavBar = () => {
                         ))
                     }
                 </ul>
-                <div className='ml-auto btn-group uppercase'>
+                <div className='ml-auto  uppercase hidden md:block'>
                     <a
                         className="btn btn-primary"
                         href={"/"}
@@ -124,7 +124,6 @@ const NavBar = () => {
                             <div className="ml-auto"><MdClose size={32} onClick={() => setOpen(false)} /></div>
                         </motion.div>
                         <motion.ul {...panel} className="flex flex-col items-center uppercase p-4 h-full text-center text-xl leading-[4rem] ">
-
                             {
                                 menus.map((menu, index) => (
                                     <motion.li {...text(index)} onClick={(e) => {
@@ -134,7 +133,18 @@ const NavBar = () => {
                                         <a href={menu.id}>{menu.label}</a>
                                     </motion.li>
                                 ))}
+                            <li className='mt-[5rem] uppercase block md:hidden'>
+                                <a
+                                    className="btn btn-primary"
+                                    href={"/"}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    resume
+                                </a>
+                            </li>
                         </motion.ul>
+
                     </motion.div>
                 ) : null}
 

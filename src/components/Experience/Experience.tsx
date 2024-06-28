@@ -32,7 +32,7 @@ const Experience = () => {
                 <div className="sectionTitle">Experience</div>
                 <div className="big-card flex justify-center mdl:px-[9rem]">
                     <ul
-                        className="timeline container flex flex-col items-center justify-end m-[4rem_0_2rem_0] gap-[5rem] max-w-[768px]">
+                        className="timeline container flex flex-col items-center justify-end my-3 mdl:m-[4rem_0] gap-[5rem] max-w-[768px]">
                         {experience.map((item) => (
                             <ScrollAnimation animateIn='fadeInLeft' key={item.company} >
                                 <ListExperience {...item} />
@@ -51,7 +51,7 @@ const ListExperience = (item: IExperience) => {
     return (
         <li className="timeline-item">
             <div className="date">{item.date}</div>
-            <div className='ml-[3.5rem] md:ml-10 '>
+            <div className='ml-[1.8rem] md:ml-10 '>
                 <h3 className="font-bold text-2xl">{item.position}</h3>
                 <p className="text-gray-400">{item.company}</p>
                 <p className="text-gray-400 xl:hidden block">{item.date} - {item.end}</p>

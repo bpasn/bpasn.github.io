@@ -6,17 +6,23 @@ import SocialIcon from './components/SocialIcon/SocialIcon';
 import About from './components/About/About';
 import Experience from './components/Experience/Experience';
 import Contact from './components/Contact/Contact';
+import DialogComponent from './components/Project/components/DialogComponent';
+import { DialogProvider, useDialogContext } from './context/dialog-context';
+import MyDialog from './components/Project/components/DialogComponent';
 
 function App() {
   return (
-    <Layout>
-      <Hero />
-      <Project />
-      <About />
-      <SocialIcon />
-      <Experience />
-      <Contact />
-    </Layout>
+    <DialogProvider>
+      <Layout>
+        <MyDialog />
+        <Hero />
+        <Project />
+        <About />
+        <SocialIcon />
+        <Experience />
+        <Contact />
+      </Layout>
+    </DialogProvider>
   );
 }
 

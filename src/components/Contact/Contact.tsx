@@ -38,7 +38,7 @@ const Contact = () => {
         <div className=" relative grid grid-cols-4 place-content-center text-center gap-10 mt-10 p-5 mx-auto">
           {contactSocial.map(element => (
             element.href ? (
-              <a href={element.href ? element.href : ""} key={element.href} className='contact-social border-primary'>
+              <a href={element.href ? element.href : "#"} key={element.href} className='contact-social border-primary'>
                 <code>
                   <element.icon size={22} />
                 </code>

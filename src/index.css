@@ -2,122 +2,177 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    /* Name: custom color palette
+       Author: Ilias Ism
+       URL: https://gradient.page */
+
+    /* CSS: .bg-gradient { background: var(--gradient) } */
+    --gradient: #02D66A;
+
+    --background: 159 63.699999999999996% 3.36%;
+    --foreground: 159 9.8% 97.1%;
+
+    --muted: 159 49% 12.6%;
+    --muted-foreground: 159 9.8% 54.2%;
+
+    --popover: 159 45.4% 5.46%;
+    --popover-foreground: 159 9.8% 97.1%;
+
+    --card: 159 45.4% 5.46%;
+    --card-foreground: 159 9.8% 97.1%;
+
+    --border: 159 49% 12.6%;
+    --input: 159 49% 12.6%;
+
+    --primary: 159 98% 42%;
+    --primary-foreground: 159 9.8% 97.1%;
+
+    --secondary: 159 49% 12.6%;
+    --secondary-foreground: 159 9.8% 97.1%;
+
+    --accent: 159 49% 12.6%;
+    --accent-foreground: 159 9.8% 97.1%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 159 9.8% 97.1%;
+
+    --ring: 159 98% 42%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
 @font-face {
-    font-family: 'Sukhumvit';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local(Inter), url(./assets/fonts/sukhumvit/SukhumvitSet-Text.ttf) format('truetype')
+  font-family: 'Sukhumvit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(Inter), url(./assets/fonts/sukhumvit/SukhumvitSet-Text.ttf) format('truetype')
 }
 
 @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local(Inter), url(./assets/fonts/inter/Inter-Black.ttf) format('truetype')
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(Inter), url(./assets/fonts/inter/Inter-Black.ttf) format('truetype')
 }
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 img,
 video {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    @apply font-sukhumvit bg-[#fafaff] text-white
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply font-sukhumvit bg-[#fafaff] text-white
 }
-
-a {
-    text-decoration: none;
-    color: inherit;
-    background-color: transparent;
-    transition: 0.2s ease-in;
-}
-
-ul,
-ol {
-    list-style: none;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
 .btn {
-    @apply rounded-md cursor-pointer transition-all duration-300 ease-in-out font-[400] outline-none
+  @apply rounded-md cursor-pointer transition-all duration-300 ease-in-out font-[400] outline-none
 }
 
 .btn-secondary {
-    @apply p-[10px_18px] border-[2px_solid_rgb(57,134,250)] text-[#010606] mr-[1rem]
+  @apply p-[10px_18px] border-[2px_solid_rgb(57,134,250)] text-[#010606] mr-[1rem]
 }
 
 .btn-shadow {
-    @apply shadow-[0_2px_5px_rgba(160,170,180,0.6)] hover:shadow-[0_2px_8px_rgba(160,170,180,0.6)]
+  @apply shadow-[0_2px_5px_rgba(160,170,180,0.6)] hover:shadow-[0_2px_8px_rgba(160,170,180,0.6)]
 }
 
 .btn-primary {
-    @apply p-[10px_18px] border-none bg-primary text-white hover:bg-primary/80
+  @apply p-[10px_18px] border-none bg-primary text-white hover:bg-primary/80
 }
 
 .sectionTitle {
-    @apply text-[28px] text-[#151418] font-[700] mb-[3.5rem]
+  @apply text-[28px] text-[#151418] font-[700] mb-[3.5rem]
 }
 
 .big-card {
-    @apply relative px-[2rem]  py-[2rem] rounded-md flex flex-col bg-[#fff] shadow-md;
+  @apply relative px-[2rem]  py-[2rem] rounded-md flex flex-col bg-[#fff] shadow-md;
 }
 
 .warpper-content {
-    @apply mt-[5rem] text-[rgba(0,0,0,0.815)]
+  @apply mt-[5rem] text-[rgba(0,0,0,0.815)]
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+  width: 0;
 }
 
 ul li a.active {
-    @apply border-b-2 border-primary
+  @apply border-b-2 border-primary
 }
 
 ul.ul-style li.item {
-    content: " ";
-    width: 30px;
-    @apply border-primary;
-    list-style: none;
+  content: " ";
+  width: 30px;
+  @apply border-primary;
+  list-style: none;
 
 }
 
 
 .custom-line {
-    @apply bg-primary h-[1px];
+  @apply bg-primary h-[1px];
 }
 
 .contact-social {
-    @apply md:col-span-2 border-none rounded-md p-3 shadow-md btn-secondary gap-3 flex items-center justify-center
+  @apply md:col-span-2 border-none rounded-md p-3 shadow-md btn-secondary gap-3 flex items-center justify-center
 }
 
 .contact-social strong {
-    @apply hidden md:block
+  @apply hidden md:block
 }

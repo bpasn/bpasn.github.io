@@ -7,10 +7,10 @@
 }
 
 .card-left {
-    @apply justify-self-center h-full
+    @apply justify-self-center max-h-[300px] relative
 }
-.card-left img {
-    object-fit: cover;
+.card-left img,canvas {
+    @apply object-contain 
 }
 
 .card-right {

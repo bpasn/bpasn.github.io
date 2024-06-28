@@ -22,6 +22,7 @@ const About = () => {
   };
   return (
     <div className="warpper-content wrapper-about " id='about'>
+      
       <div className="container">
         <div className="sectionTitle">About Me</div>
         <div className="big-card">

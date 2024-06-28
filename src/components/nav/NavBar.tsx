@@ -42,7 +42,7 @@ const NavBar = () => {
         return () => {
             window.removeEventListener("resize", handleResize)
         }
-    }, [open, window.innerWidth]);
+    }, [open]);
 
     const handleResize = () => {
         if (window.innerWidth < 768) {
@@ -83,8 +83,19 @@ const NavBar = () => {
 
         setOpen(false);
     };
+    const handleDownload = () => {
+        let link: HTMLAnchorElement = document.createElement<"a">('a');
+
+        let file = '/pdf/Resume.pdf';
+        link.href = file; // URL ของไฟล์ที่ต้องการดาวน์โหลด
+        link.download = 'Resume.pdf'; // ชื่อไฟล์ที่จะถูกดาวน์โหลด
+        // คลิกที่ลิงก์เพื่อดาวน์โหลดไฟล์
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
     return (
-        <header className="sticky  top-0 z-50 w-full border-b border-border/40 border-gray-800 border-border/40 bg-[#151418] bg-background/95 backdrop-blur">
+        <header className="sticky  top-0 z-50 w-full border-b  border-gray-800 border-border/40 bg-[#151418] backdrop-blur">
             <div className="px-2 mx-2 md:container h-14 flex max-w-screen-2xl items-center">
                 <div className="mr-4 md:flex">
                     <a href='#hero' className='text-3xl font-bold tracking-[0.3em] text-white mr-6 flex items-center w-10 h-10 space-x-2 cursor-pointer' >
@@ -101,15 +112,12 @@ const NavBar = () => {
                         ))
                     }
                 </ul>
-                <div className='ml-auto  uppercase hidden md:block'>
-                    <a
+                <div className='ml-auto  uppercase hidden mdl:block'>
+                    <button onClick={handleDownload}
                         className="btn btn-primary"
-                        href={"/"}
-                        target="_blank"
-                        rel="noopener noreferrer"
                     >
                         resume
-                    </a>
+                    </button>
                 </div>
             </div>
             <AnimatePresence>
@@ -134,14 +142,12 @@ const NavBar = () => {
                                     </motion.li>
                                 ))}
                             <li className='mt-[5rem] uppercase block md:hidden'>
-                                <a
+                                <button onClick={handleDownload}
                                     className="btn btn-primary"
-                                    href={"/"}
-                                    target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     resume
-                                </a>
+                                </button>
                             </li>
                         </motion.ul>
 

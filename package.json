@@ -1,6 +1,7 @@
 {
   "name": "my-spa",
   "version": "0.1.0",
+  "homepage": "https://prpasn.github.io",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -41,7 +42,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy":"gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

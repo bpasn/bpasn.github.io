@@ -15,12 +15,12 @@
 }
 
 .timeline-item::before {
-    @apply content-[''] absolute w-[30px] h-[30px] bg-primary rounded-full -left-[1.5rem] mdl:left-[0.4rem] top-[0rem] shadow-[rgb(108,212,186)_3px_3px_30px_5px]
+    @apply content-['']  absolute w-[20px] h-[20px] md:w-[30px] md:h-[30px] bg-primary rounded-full -left-[1rem] mdl:left-[0.4rem] top-[.4rem] mdl:top-[0rem] shadow-[rgb(108,212,186)_3px_3px_30px_5px]
 }
 
 
 .timeline-item::after {
-    @apply content-[''] absolute w-[1px] h-[100%] bg-primary/45 -left-[0.55rem] mdl:left-[1.25rem] top-[2.5rem]
+    @apply content-['']  absolute w-[1px] h-[100%] bg-primary/45 left-[-.4rem]  mdl:left-[1.25rem] top-[2.5rem]
 }
 
 

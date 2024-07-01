@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import ScrollAnimation from "react-animate-on-scroll";
-import data from '../data/ProjectData.json';
 import { useDialogContext } from '../../../context/dialog-context';
 import ContentProject from './ContentProject';
+import {projects} from '../data/projectData';
 interface IProject {
     img: string;
     title: string;
@@ -17,14 +17,14 @@ const ProjectCard = () => {
     const dialogContext = useDialogContext();
     const handleClick = () => {
         dialogContext.setOpen(true);
-        dialogContext.setContent(<ContentProject />)
-    }
+        dialogContext.setContent(<ContentProject />);
+    };
 
 
     return (
         <>
-            {data.projects.map((project: IProject, index: number) => {
-                
+            {projects.map((project: IProject, index: number) => {
+
                 return (
                     <ScrollAnimation animateIn="fadeInLeft" animatePreScroll key={index}>
                         <div className="card"  >
@@ -64,11 +64,11 @@ const ProjectCard = () => {
                             </div>
                         </div>
                     </ScrollAnimation>
-                )
+                );
             })
             }
         </>
-    )
-}
+    );
+};
 
-export default ProjectCard
+export default ProjectCard;

@@ -18,7 +18,7 @@ function App() {
         <Hero />
         <Project />
         <About />
-        <SocialIcon />
+        {/* <SocialIcon /> */}
         <Experience />
         <Contact />
       </Layout>

@@ -116,7 +116,7 @@ const NavBar = () => {
                     <button onClick={handleDownload}
                         className="btn btn-primary"
                     >
-                        resume
+                        RESUME
                     </button>
                 </div>
             </div>

@@ -98,9 +98,9 @@ const NavBar = () => {
         <header className="sticky  top-0 z-50 w-full border-b  border-gray-800 border-border/40 bg-[#151418] backdrop-blur">
             <div className="px-2 mx-2 md:container h-14 flex max-w-screen-2xl items-center">
                 <div className="mr-4 md:flex">
-                    <a href='#hero' className='text-3xl font-bold tracking-[0.3em] text-white mr-6 flex items-center w-10 h-10 space-x-2 cursor-pointer' >
+                    <Link to='hero' smooth duration={100} offset={-57}  className='text-3xl font-bold tracking-[0.3em] text-white mr-6 flex items-center w-10 h-10 space-x-2 cursor-pointer' >
                         DEV
-                    </a>
+                    </Link>
                 </div>
                 <FaBars onClick={() => setOpen(!open)} className='cursor-pointer block mdl:hidden ml-auto' size={22} />
                 <ul className=" ml-auto hidden mdl:flex mdl:w-auto text-lg">

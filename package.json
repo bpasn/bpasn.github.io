@@ -1,7 +1,7 @@
 {
   "name": "my-spa",
   "version": "0.1.0",
-  "homepage": "https://prpasn.github.io",
+  "homepage": "https://bpasn.github.io",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",

@@ -65,7 +65,7 @@ const ListExperience = (item: IExperience) => {
                 <h3 className="font-bold text-2xl">{item.position}</h3>
                 <p className="text-gray-400">{item.company}</p>
                 <p className="text-gray-400 xl:hidden block">{item.date} - {item.end}</p>
-                <ul className='text-xl list-disc marker:text-primary ml-5'>
+                <ul className='list-disc marker:text-primary ml-5'>
                     {item.description.map((desc,index) => (
                         <li key={index}>{desc}</li>
                     ))}

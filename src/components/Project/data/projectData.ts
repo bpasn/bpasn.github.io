@@ -38,7 +38,7 @@ export const projects =  [
             "PHP",
             "Bootstrap"
         ],
-        "github_url": "#",
+        "github_url": "",
         "demo_url": "https://uatrbh.etaxsolution.com/"
     },
     {
@@ -50,7 +50,7 @@ export const projects =  [
             "NodeJs",
             "MaterialUI"
         ],
-        "github_url": "#",
+        "github_url": "",
         "demo_url": "https://sl.etaxsolution.com"
     },
     {
@@ -61,7 +61,7 @@ export const projects =  [
             "Flutter",
             "Provider"
         ],
-        "github_url": "#",
+        "github_url": "",
         "demo_url": "#"
     },
     {
@@ -75,7 +75,7 @@ export const projects =  [
             "JQuery",
             "MSSQL"
         ],
-        "github_url": "#",
+        "github_url": "",
         "demo_url": "https://plant.redcross.or.th/"
     },
     // {

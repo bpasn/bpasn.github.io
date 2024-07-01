@@ -57,7 +57,7 @@ const ProjectCard = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            Demo ➜
+                                            Go to website ➜
                                         </a>
                                     )}
                                 </div>

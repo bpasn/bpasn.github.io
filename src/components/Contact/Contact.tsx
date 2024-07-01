@@ -32,9 +32,8 @@ const Contact = () => {
 
   return (
     <section id="contact" className='warpper-content'>
-      <div className="container flex flex-col  py-10 h-full mt-auto">
+      <div className="container flex flex-col  py-10  mt-auto">
         <h2 className="sectionTitle mb-[0_!important] px-2">Contact Me</h2>
-
         <div className=" relative grid grid-cols-4 place-content-center text-center gap-10 mt-10 p-5 mx-auto">
           {contactSocial.map(element => (
             element.href ? (

@@ -1,16 +1,12 @@
 .card {
-    /* --tw-shadow: 0 5px 15px -3px rgba(0 0 0 0.1) 0 4px 6px -2px rgba(0 0 0 0.5);
-    --tw-shadow-colored: 0 5px 15px -3px var(--tw-shadow-color);
-    box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05); */
     @apply grid grid-cols-1 mdl:grid-cols-2 rounded-xl border-b-0 pb-[2rem] mb-[4rem]  mdl:mb-[4rem] mdl:pb-[0rem] gap-[2rem] overflow-hidden shadow-[0_5px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-2px_rgba(0,0,0,0.05)]
 }
 
 .card-left {
     @apply justify-self-center max-h-[300px] relative
 }
-.card-left img,canvas {
-    @apply object-contain 
+.card-left img {
+    @apply object-cover 
 }
 
 .card-right {

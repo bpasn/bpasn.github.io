@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import ScrollAnimation from "react-animate-on-scroll";
-import { useDialogContext } from '../../../context/dialog-context';
-import ContentProject from './ContentProject';
 import {projects} from '../data/projectData';
 interface IProject {
     img: string;
@@ -14,7 +12,7 @@ interface IProject {
 const ProjectCard = () => {
     const [expanded, setExpanded] = useState<boolean>(false);
     const [elementExpanded, setElementExpanded] = useState<number>();
-    const dialogContext = useDialogContext();
+    // const dialogContext = useDialogContext();
     const handleClick = () => {
         // dialogContext.setOpen(true);
         // dialogContext.setContent(<ContentProject />);
@@ -28,8 +26,8 @@ const ProjectCard = () => {
                 return (
                     <ScrollAnimation animateIn="fadeInLeft" animatePreScroll key={index}>
                         <div className="card"  >
-                            <div className="card-left" onClick={handleClick}>
-                                <img src={project.img} alt={project.title} />
+                            <div className="card-left " onClick={handleClick}>
+                                <img src={project.img} className="object-cover" alt={project.title} />
                             </div>
                             <div className="card-right">
                                 <h1>{project.title}</h1>

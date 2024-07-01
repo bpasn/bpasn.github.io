@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,7 +99,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(Inter), url(./assets/fonts/inter/Inter-Black.ttf) format('truetype')
+  src: local(Inter), url(./assets/fonts/inter/Inter-Regular.ttf) format('truetype')
 }
 
 *,
@@ -116,9 +118,7 @@ video {
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  @apply font-sukhumvit bg-[#fafaff] text-white
+  @apply font-sukhumvit bg-[#fafaff] text-white font-[400] antialiased 
 }
 .btn {
   @apply rounded-md cursor-pointer transition-all duration-300 ease-in-out font-[400] outline-none

@@ -13,7 +13,7 @@ const Layout: React.FC<Props> = ({ children }) => {
             <div className="absolute inset-0 bg-gray-900 bg-opacity-80 " /> */}
             <NavBar />
             {children}
-            <footer className='bg-footer bg-no-repeat bg-cover w-full h-[250px] relative'>
+            <footer className='bg-wave-contact bg-no-repeat bg-cover w-full h-[250px] relative'>
                 <div className="container"></div>
             </footer>
         </>

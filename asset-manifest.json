@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.c43587d2.css",
-    "main.js": "/static/js/main.391c7bbe.js",
+    "main.js": "/static/js/main.2a91406a.js",
     "static/js/453.e778e07f.chunk.js": "/static/js/453.e778e07f.chunk.js",
     "static/media/Inter-Black.ttf": "/static/media/Inter-Black.83d81b169bedf85385f2.ttf",
     "static/media/SukhumvitSet-Text.ttf": "/static/media/SukhumvitSet-Text.1012e8c02719f8cb0293.ttf",
     "static/media/man-svgrepo-com.svg": "/static/media/man-svgrepo-com.56aeab6d39e31054d63430280eb9976b.svg",
     "static/media/scroll-down.svg": "/static/media/scroll-down.f379348c6096553dbfe4d31167015caa.svg",
-    "static/media/blob-haikei.svg": "/static/media/blob-haikei.f335310a0348e80d6a09.svg",
     "index.html": "/index.html",
+    "static/media/blob-haikei.svg": "/static/media/blob-haikei.f335310a0348e80d6a09.svg",
     "main.c43587d2.css.map": "/static/css/main.c43587d2.css.map",
-    "main.391c7bbe.js.map": "/static/js/main.391c7bbe.js.map",
+    "main.2a91406a.js.map": "/static/js/main.2a91406a.js.map",
     "453.e778e07f.chunk.js.map": "/static/js/453.e778e07f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c43587d2.css",
-    "static/js/main.391c7bbe.js"
+    "static/js/main.2a91406a.js"
   ]
 }

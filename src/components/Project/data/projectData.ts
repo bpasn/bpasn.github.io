@@ -62,7 +62,7 @@ export const projects =  [
             "Provider"
         ],
         "github_url": "",
-        "demo_url": "#"
+        "demo_url": ""
     },
     {
         "img": "/assets/image/image1.png",

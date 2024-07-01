@@ -1,10 +1,10 @@
 
+// import "animate.css/animate.min.css";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import './index.css';
-import "animate.css/animate.compat.css"
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

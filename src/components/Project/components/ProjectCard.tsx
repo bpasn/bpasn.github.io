@@ -16,8 +16,8 @@ const ProjectCard = () => {
     const [elementExpanded, setElementExpanded] = useState<number>();
     const dialogContext = useDialogContext();
     const handleClick = () => {
-        dialogContext.setOpen(true);
-        dialogContext.setContent(<ContentProject />);
+        // dialogContext.setOpen(true);
+        // dialogContext.setContent(<ContentProject />);
     };
 
 

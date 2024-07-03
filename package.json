@@ -43,7 +43,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy":"gh-pages -d build"
+    "deploy:github":"gh-pages -d build",
+    "deploy:firebase":"react-scripts build && firebase deploy",
+    "firebase:preview":"react-scripts build && firebase hosting:channel:deploy "
   },
   "eslintConfig": {
     "extends": [

@@ -24,11 +24,6 @@
     "resolveJsonModule": true,
     "emitDeclarationOnly": true,
     "baseUrl": "src",
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
   },
   "include": [
     "src"

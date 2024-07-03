@@ -10,7 +10,7 @@ const HeroImage:React.FC<HeroImageProps> = ({
   alt
 }) => {
   return (
-    <img src={src} alt={alt} className='h-[300px] w-auto'/>
+    <img src={src} alt={alt} className='h-[500px] w-auto object-contain '/>
   )
 }
 

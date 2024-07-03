@@ -1,13 +1,27 @@
-import React from 'react';
-import ManSvgRepo from '../../assets/image/man-svgrepo-com.svg';
+import React, { useCallback, useEffect, useState } from 'react';
+import ManSvgRepo from '../../assets/image/60122202038.png';
 import ScrollAnimation from 'react-animate-on-scroll';
-import json from './stack.json';
 import './about.css';
+import { EachElement } from 'lib/utils';
 
+interface IStack {
+  name: string;
+  img: string;
+}
 const About = () => {
+  const [stacks, setStack] = useState<IStack[]>([]);
+  const stackCallback = useCallback(() => {
+    fetch("/assets/json/stacks.json")
+      .then<IStack[]>(e => e.json())
+      .then(result => setStack(result))
+  }, [stacks])
+  useEffect(() => {
+    return () => {
+      stackCallback();
+    }
+  }, []);
   return (
     <div className="warpper-content wrapper-about " id='about'>
-
       <div className="container">
         <div className="sectionTitle">About Me</div>
         <div className="big-card">
@@ -23,14 +37,17 @@ const About = () => {
             <br /><br />
 
             <div className="techologies">
-              {json.stacks.map((stack, index) => (
-                <ScrollAnimation animateIn='fadeInLeft' key={index}>
-                  <div className="tech" key={stack.name}>
-                    <img className='tech-img' src={stack.img} alt={stack.name} />
-                    <div className="tech-name">{stack.name}</div>
-                  </div>
-                </ScrollAnimation>
-              ))}
+              <EachElement
+                of={stacks}
+                render={(stack) => (
+                  <ScrollAnimation animateIn='fadeInLeft'>
+                    <div className="tech" key={stack.name}>
+                      <img className='tech-img' src={stack.img} alt={stack.name} />
+                      <div className="tech-name">{stack.name}</div>
+                    </div>
+                  </ScrollAnimation>
+                )}
+              />
             </div>
           </div>
         </div>

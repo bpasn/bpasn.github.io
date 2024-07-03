@@ -1,11 +1,12 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import ScrollAnimation from 'react-animate-on-scroll';
-import './hero.css';
 import HeroImage from './components/HeroImage';
-import Banner from '../../assets/image/man-svgrepo-com.svg'
+import Banner from '../../assets/image/profile-bg-preview-corp.png'
 import ScrollDown from './components/ScrollDown';
 import ScrollDownSVG from '../../assets/image/scroll-down.svg';
+import './hero.css';
+
 const Hero = () => {
   const [showSubTitle, setShowSubTitle] = React.useState(false);
   const [showScrollDown, setShowScrollDown] = React.useState(false);
@@ -14,7 +15,7 @@ const Hero = () => {
       <section id='hero' className='hero-container'>
         <div className="hero-wrapper">
           <div className="hero-left">
-            <ScrollAnimation animateIn='fadeIn' offset={0} >
+            <ScrollAnimation animateIn='fadeIn' offset={0} className='h-[200px]'>
               <TypeAnimation
                 cursor={false}
                 sequence={[
@@ -67,7 +68,7 @@ const Hero = () => {
           </div>
         </div>
         {showScrollDown && (<ScrollAnimation animateIn='flipInX' offset={0} />)}
-        <ScrollDown to='projects' id='scrollDown' offset={-60}>
+        <ScrollDown to='projects' id='scrollDown' offset={-100} scrolling='true'>
           <div className="flex items-center text-[1.3rem] text-[#f6f6f6]">
             Scroll down
             <img src={ScrollDownSVG} alt="scrollDown" className='h-[35px] w-[35px] ml-[6px]' />

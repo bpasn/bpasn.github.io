@@ -1,5 +1,5 @@
 .wrapper-about img {
-    @apply max-w-[120px] m-[0_auto] mb-[2rem]
+    @apply max-w-[150px] m-[0_auto] mb-[2rem]
 }
 
 .wrapper-about .techologies {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './experience.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 interface IExperience {
@@ -8,34 +8,21 @@ interface IExperience {
     description: string[];
     end: string;
 }
-const experience: IExperience[] = [
-    {
-        date: "2022",
-        position: "Junior Full-Stack Developer",
-        company: "2J Solution and Services Co., Ltd.",
-        description: [
-            "Developed and modified programs to meet user needs and requirements, ensuring high functionality and usability.",
-            "Created comprehensive plans to optimize and enhance working processes, improving efficiency and productivity.",
-            "Developed reports exportable in Excel and other formats, facilitating data analysis and reporting.",
-            "Set up environment websites using OS Linux, including configuring ports and Nginx, to ensure accessibility in browsers.",
-            "Led the mobile application development for the POS UI System on the SayPay Project using Flutter (Android and iOS), ensuring a seamless user experience across platforms."
-        ],
-        end: "Present"
-    },
-    {
-        date: "2020",
-        position: "Junior Front-End Developer",
-        company: "Nippon Sysits Co., Ltd.",
-        description: [
-            "Developed client-specific web applications using VB.net to ensure all requirements were met, providing tailored solutions for diverse clients.",
-            "Designed and implemented exportable reports in Excel and various formats for enhanced data accessibility, streamlining client operations.",
-            "Coordinated closely with business development and project management teams to ensure on-time task completion, fostering effective teamwork and project success."
-        ],
-        end: "2022"
-    },
 
-];
 const Experience = () => {
+    const [experience, setExperience] = useState<IExperience[]>([]);
+
+    const experienceCallback = useCallback(async () => {
+        fetch("/assets/json/experience.json")
+            .then<IExperience[]>(res => res.json())
+            .then(result => setExperience(result));
+    }, [experience]);
+    
+    useEffect(() => {
+        return () => {
+            experienceCallback()
+        }
+    }, [])
     return (
         <section className='warpper-content' id='experience'>
             <div className="container">
@@ -66,7 +53,7 @@ const ListExperience = (item: IExperience) => {
                 <p className="text-gray-400">{item.company}</p>
                 <p className="text-gray-400 xl:hidden block">{item.date} - {item.end}</p>
                 <ul className='list-disc marker:text-primary ml-5'>
-                    {item.description.map((desc,index) => (
+                    {item.description.map((desc, index) => (
                         <li key={index}>{desc}</li>
                     ))}
                 </ul>

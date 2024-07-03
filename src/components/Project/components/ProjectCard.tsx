@@ -1,6 +1,7 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ScrollAnimation from "react-animate-on-scroll";
 import { EachElement } from '../../../lib/utils';
+import projects from '../../../json/projects.json';
 interface IProject {
     img: string;
     title: string;
@@ -18,25 +19,12 @@ const ProjectCard = () => {
         // dialogContext.setContent(<ContentProject />);
     };
 
-    const [projects,setProject] = useState<IProject[]>([]);
-    const projectCallback = useCallback(() => {
-        fetch("/assets/json/projects.json")
-        .then<IProject[]>(res => res.json())
-        .then(result => setProject(result));
-    },[projects]);
-
-    useEffect(() => {
-        return () => {
-            projectCallback();
-        }
-    },[])
-
     return (
         <>
             {
                 <EachElement
                     of={projects}
-                    render={(project, index) => (
+                    render={(project: IProject, index) => (
                         <ScrollAnimation animateIn="fadeInLeft" animatePreScroll>
                             <div className="card"  >
                                 <div className="card-left " onClick={handleClick}>

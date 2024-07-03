@@ -9,7 +9,6 @@ import './hero.css';
 
 const Hero = () => {
   const [showSubTitle, setShowSubTitle] = React.useState(false);
-  const [showScrollDown, setShowScrollDown] = React.useState(false);
   return (
     <main className='bg-hero-pattern bg-[#151418] bg-no-repeat bg-cover w-full'>
       <section id='hero' className='hero-container'>
@@ -40,8 +39,6 @@ const Hero = () => {
                   "Uhh...",
                   1000,
                   "Uhh... you can scroll down to see my projects now...",
-                  300,
-                  () => setShowScrollDown(true),
                   1000,
                   "Seriously, my projects are really cool, go check them out!",
                   1000,
@@ -62,12 +59,11 @@ const Hero = () => {
             </ScrollAnimation>
           </div>
           <div className="flex-1 justify-center flex">
-            <ScrollAnimation animateIn='fadeIn'>
+            <ScrollAnimation animateIn={"fadeIn"}>
               <HeroImage src={Banner} alt='man-svgrepo' />
             </ScrollAnimation>
           </div>
         </div>
-        {showScrollDown && (<ScrollAnimation animateIn='flipInX' offset={0} />)}
         <ScrollDown to='projects' id='scrollDown' offset={-100} scrolling='true'>
           <div className="flex items-center text-[1.3rem] text-[#f6f6f6]">
             Scroll down

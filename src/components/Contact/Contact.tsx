@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React from 'react'
 import { MdOutlineMail } from 'react-icons/md';
 import { FiPhone } from 'react-icons/fi';
 import { IoLocationOutline } from 'react-icons/io5';
@@ -6,7 +6,6 @@ import { FaLine } from "react-icons/fa6";
 import './contact.css'
 import { EachElement } from 'lib/utils';
 import { IconType } from 'react-icons';
-import ScrollAnimation from 'react-animate-on-scroll';
 interface IContact {
   icon: IconType, text: string, href: string | undefined;
 }
@@ -40,27 +39,27 @@ const Contact = () => {
       <div className="container flex flex-col  py-10  mt-auto">
         <h2 className="sectionTitle mb-[0_!important] px-2">Contact Me</h2>
         <div className=" relative grid grid-cols-4 place-content-center text-center gap-10 mt-10 p-5 mx-auto">
-            <EachElement
-              of={contacts}
-              render={(element) => {
-                return (
-                  element.href ? (
-                    <a href={element.href} className='contact-social border-primary'>
-                      <code>
-                        <element.icon size={22} />
-                      </code>
-                      <strong>{element.text}</strong>
-                    </a>) : (
-                    <p className='contact-social'>
-                      <code>
-                        <element.icon size={22} />
-                      </code>
-                      <strong>{element.text}</strong>
-                    </p>
-                  )
+          <EachElement
+            of={contacts}
+            render={(element) => {
+              return (
+                element.href ? (
+                  <a href={element.href} className='contact-social border-primary'>
+                    <code>
+                      <element.icon size={22} />
+                    </code>
+                    <strong>{element.text}</strong>
+                  </a>) : (
+                  <p className='contact-social'>
+                    <code>
+                      <element.icon size={22} />
+                    </code>
+                    <strong>{element.text}</strong>
+                  </p>
                 )
-              }}
-            />
+              )
+            }}
+          />
         </div>
 
         <div className="mt-6  text-center w-full  px-4">

@@ -1,6 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React from 'react';
 import './experience.css';
 import ScrollAnimation from 'react-animate-on-scroll';
+import experiences from '../../json/experience.json';
+import { EachElement } from 'lib/utils';
 interface IExperience {
     date: string;
     position: string;
@@ -10,19 +12,6 @@ interface IExperience {
 }
 
 const Experience = () => {
-    const [experience, setExperience] = useState<IExperience[]>([]);
-
-    const experienceCallback = useCallback(async () => {
-        fetch("/assets/json/experience.json")
-            .then<IExperience[]>(res => res.json())
-            .then(result => setExperience(result));
-    }, [experience]);
-    
-    useEffect(() => {
-        return () => {
-            experienceCallback()
-        }
-    }, [])
     return (
         <section className='warpper-content' id='experience'>
             <div className="container">
@@ -30,11 +19,14 @@ const Experience = () => {
                 <div className="big-card  px-[1rem_!important] flex justify-center mdl:px-[9rem_!important]">
                     <ul
                         className="timeline container flex flex-col items-center justify-end my-3 mdl:m-[4rem_0] gap-[5rem] max-w-[768px]">
-                        {experience.map((item) => (
-                            <ScrollAnimation animateIn='fadeInLeft' key={item.company} >
-                                <ListExperience {...item} />
-                            </ScrollAnimation>
-                        ))}
+                        <EachElement
+                            of={experiences}
+                            render={(item) => (
+                                <ScrollAnimation animateIn='fadeInLeft' >
+                                    <ListExperience {...item} />
+                                </ScrollAnimation>
+                            )}
+                        />
                     </ul>
                 </div>
             </div>

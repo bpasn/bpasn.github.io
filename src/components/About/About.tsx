@@ -1,25 +1,15 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React from 'react';
 import ManSvgRepo from '../../assets/image/60122202038.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 import './about.css';
 import { EachElement } from 'lib/utils';
-
+import stacks from '../../json/stacks.json';
 interface IStack {
   name: string;
   img: string;
 }
 const About = () => {
-  const [stacks, setStack] = useState<IStack[]>([]);
-  const stackCallback = useCallback(() => {
-    fetch("/assets/json/stacks.json")
-      .then<IStack[]>(e => e.json())
-      .then(result => setStack(result))
-  }, [stacks])
-  useEffect(() => {
-    return () => {
-      stackCallback();
-    }
-  }, []);
+
   return (
     <div className="warpper-content wrapper-about " id='about'>
       <div className="container">
@@ -39,7 +29,7 @@ const About = () => {
             <div className="techologies">
               <EachElement
                 of={stacks}
-                render={(stack) => (
+                render={(stack: IStack) => (
                   <ScrollAnimation animateIn='fadeInLeft'>
                     <div className="tech" key={stack.name}>
                       <img className='tech-img' src={stack.img} alt={stack.name} />

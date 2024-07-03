@@ -4,13 +4,13 @@ import { FaBars } from 'react-icons/fa';
 import { MdClose } from "react-icons/md";
 import { Link } from 'react-scroll';
 import { EachElement } from '../../lib/utils';
+import menus from '../../json/nav.json';
 interface IMenus {
     id: string;
     label: string;
 }
 const NavBar = () => {
     const [open, setOpen] = React.useState(false);
-    const [menus, setMenus] = React.useState<IMenus[]>([]);
     const sideBarBg = {
         initial: {
             y: '-100%',
@@ -48,24 +48,11 @@ const NavBar = () => {
         }
     }, [open]);
 
-    const menuCallback = React.useCallback(() => {
-        fetch("/assets/json/nav.json")
-            .then<IMenus[]>(res => res.json())
-            .then(result => setMenus(result));
-    }, [menus]);
-    React.useEffect(() => {
-        return () => {
-            menuCallback();
-        }
-    }, []);
-    
     const handleResize = () => {
         if (window.innerWidth < 768) {
             setOpen(false);
         }
     }
-
-
 
     const handleNavClick = (id: string) => {
         const element: HTMLElement | null = document.getElementById(id.replace("#", ""));
@@ -106,7 +93,7 @@ const NavBar = () => {
                 <ul className=" ml-auto hidden mdl:flex mdl:w-auto text-lg">
                     <EachElement
                         of={menus}
-                        render={(menu,) => (
+                        render={(menu: IMenus) => (
                             <li key={menu.id} >
                                 <Link to={menu.id} smooth duration={100} offset={-100} className='mr-6 flex items-center  space-x-2 cursor-pointer' >{menu.label}</Link>
                             </li>

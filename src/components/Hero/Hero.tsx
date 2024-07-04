@@ -14,7 +14,7 @@ const Hero = () => {
       <section id='hero' className='hero-container'>
         <div className="hero-wrapper">
           <div className="hero-left">
-            <ScrollAnimation animateIn='fadeIn' offset={0} className='h-[200px]'>
+            <ScrollAnimation animateIn='fadeIn' offset={0} className='h-[140px]'>
               <TypeAnimation
                 cursor={false}
                 sequence={[

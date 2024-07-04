@@ -19,6 +19,7 @@ function App() {
         {/* <SocialIcon /> */}
         <Experience />
         <Contact />
+        
       </Layout>
     </DialogProvider>
   );

@@ -1,6 +1,8 @@
 import React from 'react'
 import ProjectCard from './components/ProjectCard';
 import './project.css';
+import { EachElement } from 'lib/utils';
+import projects from '../../json/projects.json';
 const Project = () => {
   return (
     <section className='relative'>
@@ -22,7 +24,10 @@ const Project = () => {
       <div className="-mt-[1px]">
         <div className="container max-w-mdl" id='projects'>
           <div className="sectionTitle">Project</div>
-          <ProjectCard />
+          <EachElement
+            of={projects}
+            render={(project, index) => <ProjectCard id={index} {...project} />}
+          />
         </div>
       </div>
     </section>

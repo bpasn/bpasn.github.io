@@ -3,10 +3,10 @@
 }
 
 .card-left {
-    @apply justify-self-center h-full w-full max-h-[300px] flex items-center justify-center overflow-hidden
+    @apply justify-self-center h-full w-full min-h-[300px] flex items-center justify-center overflow-hidden
 }
 .card-left img {
-    @apply object-fill 
+    @apply object-fill h-full
 }
 
 .card-right {

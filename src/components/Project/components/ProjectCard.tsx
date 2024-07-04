@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import ScrollAnimation from "react-animate-on-scroll";
-import { EachElement } from '../../../lib/utils';
-import projects from '../../../json/projects.json';
-interface IProject {
+interface IProjectProps {
+    id: number;
     img: string;
     title: string;
     description: string;
@@ -10,63 +9,51 @@ interface IProject {
     github_url: string;
     demo_url: string;
 }
-const ProjectCard = () => {
+const ProjectCard: React.FC<IProjectProps> = (props) => {
     const [expanded, setExpanded] = useState<boolean>(false);
     const [elementExpanded, setElementExpanded] = useState<number>();
-    // const dialogContext = useDialogContext();
     const handleClick = () => {
-        // dialogContext.setOpen(true);
-        // dialogContext.setContent(<ContentProject />);
     };
 
     return (
-        <>
-            {
-                <EachElement
-                    of={projects}
-                    render={(project: IProject, index) => (
-                        <ScrollAnimation animateIn="fadeInLeft" animatePreScroll>
-                            <div className="card"  >
-                                <div className="card-left " onClick={handleClick}>
-                                    <img src={project.img} alt={project.title} />
-                                </div>
-                                <div className="card-right">
-                                    <h1>{project.title}</h1>
-                                    <p className={`${expanded && elementExpanded === index ? "" : "truncate"}`}>{project.description}</p>
-                                    {project.description.length > 100 && (
-                                        <span className="cursor-pointer my-5" onClick={() => {
-                                            setExpanded(!expanded);
-                                            setElementExpanded(index);
-                                        }}>{expanded && elementExpanded === index ? "น้อยลง" : "เพิ่มเติม"}</span>)}
-                                    <div className='tech-card-container'>
-                                        {project.tech_stack.map((tech) => (
-                                            <div className="tech-stack" key={tech}>{tech}</div>
-                                        ))}
-                                    </div>
-                                    <div className="btn-group">
-                                        {project.github_url.length > 0 && (
-                                            <a href={project.github_url} className="btn btn-secondary btn-shadow">
-                                                Github
-                                            </a>
-                                        )}
-                                        {project.demo_url.length > 0 && (
-                                            <a
-                                                className="btn btn-primary btn-shadow"
-                                                href={project.demo_url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                Go to website ➜
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                        </ScrollAnimation>
-                    )}
-                />
-            }
-        </>
+        <ScrollAnimation animateIn="fadeInLeft" animatePreScroll>
+            <div className="card"  >
+                <div className="card-left " onClick={handleClick}>
+                    <img src={props.img} alt={props.title} />
+                </div>
+                <div className="card-right">
+                    <h1>{props.title}</h1>
+                    <p className={`${expanded && elementExpanded === props.id ? "" : "truncate"}`}>{props.description}</p>
+                    {props.description.length > 100 && (
+                        <span className="cursor-pointer my-5 underline underline-offset-4" onClick={() => {
+                            setExpanded(!expanded);
+                            setElementExpanded(props.id);
+                        }}>{expanded && elementExpanded === props.id ? "Less detail" : "More detail"}</span>)}
+                    <div className='tech-card-container'>
+                        {props.tech_stack.map((tech) => (
+                            <div className="tech-stack" key={tech}>{tech}</div>
+                        ))}
+                    </div>
+                    <div className="btn-group">
+                        {props.github_url.length > 0 && (
+                            <a href={props.github_url} className="btn btn-secondary btn-shadow">
+                                Github
+                            </a>
+                        )}
+                        {props.demo_url.length > 0 && (
+                            <a
+                                className="btn btn-primary btn-shadow"
+                                href={props.demo_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Go to website ➜
+                            </a>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </ScrollAnimation>
     );
 };
 

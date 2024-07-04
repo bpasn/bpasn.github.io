@@ -90,12 +90,12 @@ const NavBar = () => {
                     </Link>
                 </div>
                 <FaBars onClick={() => setOpen(!open)} className='cursor-pointer block mdl:hidden ml-auto' size={22} />
-                <ul className=" ml-auto hidden mdl:flex mdl:w-auto text-lg">
+                <ul className={` ml-auto hidden mdl:flex mdl:w-auto text-lg `}>
                     <EachElement
                         of={menus}
                         render={(menu: IMenus) => (
                             <li key={menu.id} >
-                                <Link to={menu.id} smooth duration={100} offset={-100} className='mr-6 flex items-center  space-x-2 cursor-pointer' >{menu.label}</Link>
+                                <Link  to={menu.id} smooth duration={100} offset={-100} className={`mr-6 flex items-center  space-x-2 cursor-pointer `}>{menu.label}</Link>
                             </li>
                         )}
                     />
@@ -127,7 +127,7 @@ const NavBar = () => {
                                         e.preventDefault();
                                         handleNavClick(menu.id);
                                     }} key={menu.id} className="p-4">
-                                        <a href={menu.id}>{menu.label}</a>
+                                        <Link to={menu.id} smooth  duration={100} offset={-70} onClick={() => setOpen(false)}>{menu.label}</Link>
                                     </motion.li>
                                 )}
                             />

@@ -2,7 +2,7 @@
     {
         "img": "/assets/project/buyer.png",
         "title": "Buyer web portal (Pttor)",
-        "description": "การนำส่งข้อมูลเอกสารอิเล็กทรอนิกส์ที่เกิดจากบริการการขาย น้ำมัน ด้วยบัตร Fleet Card ผ่านเครื่องรูดบัตร EDC แก่กรมสรรพากร ณ จุดบริการสถานีน้ำมัน ",
+        "description": "Delivery of electronic document data resulting from the sale service of oil via Fleet Card through an EDC card reader to the Revenue Department at a gas station service point",
         "tech_stack": [
             "React",
             "NodeJs",
@@ -14,7 +14,7 @@
     {
         "img": "/assets/project/etax.jpg",
         "title": "E-Tax",
-        "description": "e-Tax Invoice and e-Receipt Platform (ให้บริการกับ KBANK , BAY , PCC , RBH , BBL) เป็นระบบที่ออกแบบมาเพื่อตอบสนองความ ต้องการของกลุ่มผู้ใช้งานที่ต้องการระบบการจัดการเอกสารรายได้โดยระบบนี้รองรับการออกเอกสาร อิเล็กทรอนิกส์และยืนยันเอกสารด้วยลายเซ็นอิเล็กทรอนิกส์6 ประเภท คือ ใบเสร็จรับเงิน, ใบเสร็จแจ้งหนี้, ใบ ลดหนี้, ใบเพิ่มหนี้, ใบกำกับภาษีและ ใบแจ้งยกเลิกด้วยมาตรฐานที่ได้รับการรองรับจากกรมสรรพากร ทั้งนี้ยัง เอื้อให้การส่งเอกสารอิเล็กทรอนิกส์ไปยังลูกค้าและกรมสรรพากรสามารถทำได้ง่ายโดยลูกค้าสามารถจัดการ เอกสารและติดตามการส่งเอกสารไปยังกรมสรรพากรผ่านทางแพลตฟอร์มได้โดยตรง",
+        "description": "e-Tax Invoice and e-Receipt Platform This also provides services to KBANK, BAY, PCC, RBH, BBL, issuing electronic documents and confirming documents with electronic signatures, ",
         "tech_stack": [
             "HTML",
             "CSS",
@@ -32,7 +32,7 @@
     {
         "img": "/assets/project/sleasing.png",
         "title": "S-Leasing",
-        "description": "ดาวน์โหลดใบกำกับภาษีและใบรับอิเล็กทรอนิกส์",
+        "description": "Download tax invoices and electronic receipts",
         "tech_stack": [
             "ReactJs",
             "NodeJs",
@@ -44,7 +44,7 @@
     {
         "img": "/assets/project/saypays-logo.png",
         "title": "SaypayPOS",
-        "description": "SayPays POS ให้บริการระบบการขายแบบ POS สำหรับร้านค้าขนาดเล็ก ขนาดกลาง โดยโปรแกรมจะทำหน้าที่เกี่ยวกับการจัดการร้านค้าทั้งหมด ระบบการขายของ SayPays POS เน้นการช่วยให้ร้านค้าบริหารงานร้านค้าให้มีความสะดวกและประสิทธิภาพ โดยมีการวางระบบการจัดการและวิเคราะห์ข้อมูลธุรกิจการทำงาน จะแบ่งการทำงานออกเป็น 2 ส่วน คือ 1. โปรแกรมหน้าร้านบนคอมพิวเตอร์แท็บเล็ต หรือมือถือ รองรับการขาย การเข้าใช้ระบบของพนักงานร้าน กะการขาย พักการขาย การบันทึกยอดการขาย ออกใบเสร็จ และออกใบกํากับภาษีแบบเต็ม/ย่อ 2. โปรแกรมบริการหลังร้าน สามารถใช้ได้ทั้งบนคอมพิวเตอร์ หรือแท็บเล็ต รองรับการเพิ่ม เปลี่ยน ลดสินค้าทางร้าน ดูแลยอดสินค้าคงเหลือและออกใบสั่งซื้อวัตถุดิบ เก็บข้อมูลการใช้จ่ายของลูกค้า จัดทำโปรโมชั่น และรายงานการขาย",
+        "description": "SayPays POS Point of Sale (POS) system for small to medium-sized businesses, where the software handles overall store management.",
         "tech_stack": [
             "Flutter",
             "Provider"
@@ -55,7 +55,7 @@
     {
         "img": "/assets/image/image1.png",
         "title": "Plant Redcross",
-        "description": "การรณรงค์ให้คนหันมาปลูกป่าสีเขียวเนื่องด้วยครบรอบ 100 ปี ยุวกาชาดไทย มอบของขวัญให้แผ่นดิน เป็นการอัพโหลดรูปภาพ ข้อความเกี่ยวกับการปลูกต้นไม้",
+        "description": "The campaign encourages people to plant green forests in celebration of the 100th anniversary of the Thai Scouts, offering gifts to the land by uploading images and messages related to tree planting.",
         "tech_stack": [
             "VB.net",
             "CSS & HTML",

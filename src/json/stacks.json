@@ -60,6 +60,18 @@
         "name": "VS Code"
     },
     {
+        "img": "https://github.com/devicons/devicon/blob/master/icons/flutter/flutter-original.svg",
+        "name": "Flutter"
+    },
+    {
+        "img": "https://github.com/devicons/devicon/blob/master/icons/laravel/laravel-original.svg",
+        "name": "Laravel"
+    },
+    {
+        "img": "https://github.com/devicons/devicon/blob/master/icons/nginx/nginx-original.svg",
+        "name": "Nginx"
+    },
+    {
         "img": "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
         "name": "Docker"
     }

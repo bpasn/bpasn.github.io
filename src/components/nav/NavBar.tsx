@@ -10,6 +10,7 @@ interface IMenus {
     label: string;
 }
 const NavBar = () => {
+    const linkResume = "https://drive.google.com/file/d/1yJi-yRV2JdiQV_AqP-Ezu_vwn4q1eFdq/view?usp=drive_link";
     const [open, setOpen] = React.useState(false);
     const sideBarBg = {
         initial: {
@@ -101,7 +102,7 @@ const NavBar = () => {
                     />
                 </ul>
                 <div className='ml-auto   hidden mdl:block'>
-                    <a href='https://drive.google.com/file/d/1hd_0mCTwCPuHPOZcO9i1h7GA11eAqT6N/view?usp=drive_link' target='_blank' rel='noreferrer noopener'
+                    <a href={linkResume} target='_blank' rel='noreferrer noopener'
                         className="btn btn-primary"
                     >
                         Resume
@@ -132,7 +133,7 @@ const NavBar = () => {
                                 )}
                             />
                             <li className='mt-[5rem] uppercase block md:hidden'>
-                                <a href='https://drive.google.com/file/d/1hd_0mCTwCPuHPOZcO9i1h7GA11eAqT6N/view?usp=drive_link'
+                                <a href={linkResume}
                                     className="btn btn-primary"
                                     rel="noopener noreferrer"
                                 >

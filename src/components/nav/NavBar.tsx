@@ -95,13 +95,13 @@ const NavBar = () => {
                         of={menus}
                         render={(menu: IMenus) => (
                             <li key={menu.id} >
-                                <Link  to={menu.id} smooth duration={100} offset={-100} className={`mr-6 flex items-center  space-x-2 cursor-pointer `}>{menu.label}</Link>
+                                <Link to={menu.id} smooth duration={100} offset={-100} className={`mr-6 flex items-center  space-x-2 cursor-pointer `}>{menu.label}</Link>
                             </li>
                         )}
                     />
                 </ul>
                 <div className='ml-auto   hidden mdl:block'>
-                    <a href='https://drive.google.com/file/d/1PXhnRNxkxvRQ2QvNV7gWhn_aH0M6ymPd/view?usp=sharing' target='_blank' rel='noreferrer noopener'
+                    <a href='https://drive.google.com/file/d/1hd_0mCTwCPuHPOZcO9i1h7GA11eAqT6N/view?usp=drive_link' target='_blank' rel='noreferrer noopener'
                         className="btn btn-primary"
                     >
                         Resume
@@ -127,12 +127,12 @@ const NavBar = () => {
                                         e.preventDefault();
                                         handleNavClick(menu.id);
                                     }} key={menu.id} className="p-4">
-                                        <Link to={menu.id} smooth  duration={100} offset={-70} onClick={() => setOpen(false)}>{menu.label}</Link>
+                                        <Link to={menu.id} smooth duration={100} offset={-70} onClick={() => setOpen(false)}>{menu.label}</Link>
                                     </motion.li>
                                 )}
                             />
                             <li className='mt-[5rem] uppercase block md:hidden'>
-                                <a href='https://drive.google.com/file/d/1PXhnRNxkxvRQ2QvNV7gWhn_aH0M6ymPd/view?usp=sharing'
+                                <a href='https://drive.google.com/file/d/1hd_0mCTwCPuHPOZcO9i1h7GA11eAqT6N/view?usp=drive_link'
                                     className="btn btn-primary"
                                     rel="noopener noreferrer"
                                 >

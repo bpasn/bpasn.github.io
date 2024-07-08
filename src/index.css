@@ -118,8 +118,9 @@ video {
 }
 
 body {
-  @apply font-sukhumvit bg-[#fafaff] text-white font-[400] antialiased 
+  @apply font-Poppins bg-[#fafaff] text-white font-[400] antialiased
 }
+
 .btn {
   @apply rounded-md cursor-pointer transition-all duration-300 ease-in-out font-[400] outline-none
 }
@@ -141,7 +142,7 @@ body {
 }
 
 .big-card {
-  @apply relative px-[2rem]  py-[2rem] rounded-md flex flex-col bg-[#fff] shadow-md;
+  @apply relative px-[2rem] py-[2rem] rounded-md flex flex-col bg-[#fff] shadow-md;
 }
 
 .warpper-content {

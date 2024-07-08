@@ -32,10 +32,11 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('assets/image/blob-haikei.svg')",
-        'wave-contact':"url('assets/image/contact_wave.svg')"
+        'wave-contact':"url('assets/image/contact_wave.svg')",
       },
       fontFamily: {
         'sukhumvit': ['Sukhumvit', 'sans-serif'],
+        'Poppins':['Poppins', 'sans-serif'],
         'inter': ['Inter', 'sans-serif']
       },
       container: {

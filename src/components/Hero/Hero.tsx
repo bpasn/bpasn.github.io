@@ -2,7 +2,7 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import ScrollAnimation from 'react-animate-on-scroll';
 import HeroImage from './components/HeroImage';
-import Banner from '../../assets/image/profile-bg-preview-corp.png'
+import Portfolio from '../../assets/image/portfolio.png'
 import ScrollDown from './components/ScrollDown';
 import ScrollDownSVG from '../../assets/image/scroll-down.svg';
 import './hero.css';
@@ -14,33 +14,27 @@ const Hero = () => {
       <section id='hero' className='hero-container'>
         <div className="hero-wrapper">
           <div className="hero-left">
-            <ScrollAnimation animateIn='fadeIn' offset={0} className='h-[140px]'>
+            <ScrollAnimation animateIn='fadeIn' offset={0}>
               <TypeAnimation
                 cursor={false}
                 sequence={[
-                  "Hi,I'm Pirunporn.",
+                  "Hi, I'm Boy, a Full-Stack Developer.",
                   () => setShowSubTitle(true)
                 ]}
-                speed={{ type: "keyStrokeDelayInMs", value: 150 }}
+                speed={{ type: "keyStrokeDelayInMs", value: 100 }}
                 wrapper='h1'
                 repeat={0}
               />
+              {/* <h1>Hi, I'm Boy, a Full-Stack Developer.</h1>
+              <h5>Welcome to my portfolio website!
+Here, you'll find detailed information about my experience, skills, and projects.</h5> */}
               {showSubTitle && (
                 <TypeAnimation sequence={[500,
-                  'A Full-Stack Developer.',
-                  'A....',
-                  1000,
-                  'A.... cool guy?',
-                  1000,
-                  "Ok...",
-                  1000,
-                  "Ok...  I'm running out of ideas...",
-                  1000,
-                  "Uhh...",
-                  1000,
+                  'Welcome to my portfolio website!',
+                  500,
+                  "Here, you'll find detailed information about my experience, skills, and projects.",
+                  2000,
                   "Uhh... you can scroll down to see my projects now...",
-                  1000,
-                  "Seriously, my projects are really cool, go check them out!",
                   1000,
                   "You're uh...",
                   1000,
@@ -59,8 +53,8 @@ const Hero = () => {
             </ScrollAnimation>
           </div>
           <div className="flex-1 justify-center flex">
-            <ScrollAnimation animateIn={"fadeIn"}>
-              <HeroImage src={Banner} alt='man-svgrepo' />
+            <ScrollAnimation animateIn={"fadeIn"} offset={-20}>
+              <HeroImage src={Portfolio} alt='man-svgrepo' />
             </ScrollAnimation>
           </div>
         </div>

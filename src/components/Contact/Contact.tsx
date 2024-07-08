@@ -1,7 +1,6 @@
 import React from 'react'
 import { MdOutlineMail } from 'react-icons/md';
 import { FiPhone } from 'react-icons/fi';
-import { IoLocationOutline } from 'react-icons/io5';
 import { FaLine } from "react-icons/fa6";
 import './contact.css'
 import { EachElement } from 'lib/utils';
@@ -23,11 +22,11 @@ const Contact = () => {
       "text": "095-879-0289",
       "href": "tel:095-879-0289"
     },
-    {
-      "icon": IoLocationOutline,
-      "text": "Bankok, Phasi charoen",
-      "href": ""
-    },
+    // {
+    //   "icon": IoLocationOutline,
+    //   "text": "Bankok, Phasi charoen",
+    //   "href": ""
+    // },
     {
       "icon": FaLine,
       "text": "boyweihey",
@@ -38,7 +37,7 @@ const Contact = () => {
     <section id="contact" className='warpper-content'>
       <div className="container flex flex-col  py-10  mt-auto">
         <h2 className="sectionTitle mb-[0_!important] px-2">Contact Me</h2>
-        <div className=" relative grid grid-cols-4 place-content-center text-center gap-10 mt-10 p-5 mx-auto">
+        <div className="relative flex flex-row flex-wrap justify-center items-center text-center gap-10 mt-10 p-5 mx-auto">
           <EachElement
             of={contacts}
             render={(element) => {

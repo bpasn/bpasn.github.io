@@ -1,17 +1,11 @@
 import React from 'react';
 import './experience.css';
 import ScrollAnimation from 'react-animate-on-scroll';
-import experiences from '../../json/experience.json';
 import { EachElement } from 'lib/utils';
-interface IExperience {
-    date: string;
-    position: string;
-    company: string;
-    description: string[];
-    end: string;
-}
-
+import { IExperience } from 'typing';
+import { useGlobalContext } from 'context/firebase-context';
 const Experience = () => {
+    const { values: { experiences } } = useGlobalContext();
     return (
         <section className='warpper-content' id='experience'>
             <div className="container">
@@ -21,9 +15,9 @@ const Experience = () => {
                         className="timeline container flex flex-col items-center justify-end my-3 mdl:m-[4rem_0] gap-[5rem] max-w-[768px]">
                         <EachElement
                             of={experiences}
-                            render={(item) => (
+                            render={(item, index) => (
                                 <ScrollAnimation animateIn='fadeInLeft' >
-                                    <ListExperience {...item} />
+                                    <ListExperience {...item} id={index.toString()} />
                                 </ScrollAnimation>
                             )}
                         />

@@ -3,13 +3,9 @@ import ManSvgRepo from '../../assets/image/60122202038.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 import './about.css';
 import { EachElement } from 'lib/utils';
-import stacks from '../../json/stacks.json';
-interface IStack {
-  name: string;
-  img: string;
-}
+import { useGlobalContext } from 'context/firebase-context';
 const About = () => {
-
+  const { values: { stacks } } = useGlobalContext();
   return (
     <div className="warpper-content wrapper-about " id='about'>
       <div className="container">
@@ -29,7 +25,7 @@ const About = () => {
             <div className="techologies">
               <EachElement
                 of={stacks}
-                render={(stack: IStack) => (
+                render={(stack) => (
                   <ScrollAnimation animateIn='fadeInLeft'>
                     <div className="tech" key={stack.name}>
                       <img className='tech-img' src={stack.img} alt={stack.name} />

@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import NavBar from './nav/NavBar';
+import { fetching, useGlobalContext } from 'context/firebase-context';
 interface Props {
     children?: React.ReactNode;
 }
 const Layout: React.FC<Props> = ({ children }) => {
+    const { values, setValue } = useGlobalContext();
+    const fetchData = useCallback(async () => {
+        const data = await fetching();
+        setValue(data);
+    }, [values]);
+    useEffect(() => {
+        return () => {
+            fetchData();
+        }
+    }, []);
     return (
         <>
             {/* <img

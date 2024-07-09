@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import { MdClose } from "react-icons/md";
 import { Link } from 'react-scroll';
 import { EachElement } from '../../lib/utils';
-import menus from '../../json/nav.json';
+import { useGlobalContext } from 'context/firebase-context';
 interface IMenus {
     id: string;
     label: string;
@@ -12,6 +12,7 @@ interface IMenus {
 const NavBar = () => {
     const linkResume = "https://drive.google.com/file/d/1yJi-yRV2JdiQV_AqP-Ezu_vwn4q1eFdq/view?usp=drive_link";
     const [open, setOpen] = React.useState(false);
+
     const sideBarBg = {
         initial: {
             y: '-100%',
@@ -36,7 +37,7 @@ const NavBar = () => {
             },
         };
     };
-
+    const { values: { nav: menus } } = useGlobalContext();
     React.useEffect(() => {
         if (open) {
             document.body.style.overflow = 'hidden';

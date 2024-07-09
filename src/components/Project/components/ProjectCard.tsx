@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 import ScrollAnimation from "react-animate-on-scroll";
-interface IProjectProps {
-    id: number;
-    img: string;
-    title: string;
-    description: string;
-    tech_stack: string[];
-    github_url: string;
-    demo_url: string;
-}
-const ProjectCard: React.FC<IProjectProps> = (props) => {
+import { IProject } from 'typing';
+
+const ProjectCard: React.FC<IProject> = (props) => {
     const [expanded, setExpanded] = useState<boolean>(false);
-    const [elementExpanded, setElementExpanded] = useState<number>();
+    const [elementExpanded, setElementExpanded] = useState<string>();
     const handleClick = () => {
     };
 

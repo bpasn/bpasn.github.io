@@ -2,8 +2,9 @@ import React from 'react'
 import ProjectCard from './components/ProjectCard';
 import './project.css';
 import { EachElement } from 'lib/utils';
-import projects from '../../json/projects.json';
+import { useGlobalContext } from 'context/firebase-context';
 const Project = () => {
+  const { values: { projects } } = useGlobalContext();
   return (
     <section className='relative'>
       <svg
@@ -26,7 +27,7 @@ const Project = () => {
           <div className="sectionTitle">Project</div>
           <EachElement
             of={projects}
-            render={(project, index) => <ProjectCard id={index} {...project} />}
+            render={(project) => <ProjectCard {...project} />}
           />
         </div>
       </div>

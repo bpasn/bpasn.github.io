@@ -16,6 +16,14 @@
         "name": "ReactJS"
     },
     {
+        "img": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+        "name": "React Native"
+    },
+    {
+        "img": "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
+        "name": "Redux"
+    },
+    {
         "img": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
         "name": "NextJs"
     },
@@ -26,10 +34,6 @@
     {
         "img": "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
         "name": "Git"
-    },
-    {
-        "img": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
-        "name": "React Native"
     },
     {
         "img": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
@@ -60,15 +64,19 @@
         "name": "VS Code"
     },
     {
-        "img": "https://github.com/devicons/devicon/blob/master/icons/flutter/flutter-original.svg",
+        "img": "https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg",
         "name": "Flutter"
     },
     {
-        "img": "https://github.com/devicons/devicon/blob/master/icons/laravel/laravel-original.svg",
+        "img": "https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-original.svg",
         "name": "Laravel"
     },
     {
-        "img": "https://github.com/devicons/devicon/blob/master/icons/nginx/nginx-original.svg",
+        "img": "https://p7.hiclipart.com/preview/278/63/747/visual-basic-net-c-computer-programming-net-framework-vb-logo.jpg",
+        "name": "VB.NET"
+    },
+    {
+        "img": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg",
         "name": "Nginx"
     },
     {

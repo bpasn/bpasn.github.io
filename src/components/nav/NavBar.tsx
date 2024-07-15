@@ -101,13 +101,13 @@ const NavBar = () => {
                         )}
                     />
                 </ul>
-                <div className='ml-auto   hidden mdl:block'>
+                {/* <div className='ml-auto   hidden mdl:block'>
                     <a href={linkResume} target='_blank' rel='noreferrer noopener'
                         className="btn btn-primary"
                     >
                         Resume
                     </a>
-                </div>
+                </div> */}
             </div>
             <AnimatePresence>
                 {open ? (
@@ -132,14 +132,14 @@ const NavBar = () => {
                                     </motion.li>
                                 )}
                             />
-                            <li className='mt-[5rem] uppercase block md:hidden'>
+                            {/* <li className='mt-[5rem] uppercase block md:hidden'>
                                 <a href={linkResume}
                                     className="btn btn-primary"
                                     rel="noopener noreferrer"
                                 >
                                     Resume
                                 </a>
-                            </li>
+                            </li> */}
                         </motion.ul>
                     </motion.div>
                 ) : null}

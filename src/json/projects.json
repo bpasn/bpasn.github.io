@@ -6,10 +6,11 @@
         "tech_stack": [
             "React",
             "NodeJs",
-            "MaterialUI"
+            "MaterialUI",
+            "Redux"
         ],
         "github_url": "",
-        "demo_url": "https://uatpttor-buyer.etaxsolution.com/"
+        "demo_url": "https://pttor-buyer.etaxsolution.com/"
     },
     {
         "img": "/assets/project/etax.jpg",
@@ -36,7 +37,8 @@
         "tech_stack": [
             "ReactJs",
             "NodeJs",
-            "MaterialUI"
+            "MaterialUI",
+            "Redux"
         ],
         "github_url": "",
         "demo_url": "https://sl.etaxsolution.com"

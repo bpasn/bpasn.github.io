@@ -1,0 +1,3 @@
+.tooltip {
+    @apply inline-flex z-10 items-center justify-center box-border bg-primary outline-0 border-0 m-0 cursor-pointer select-none align-middle appearance-none text-center flex-[0_0_auto] rounded-full overflow-visible transition-[background-color_150ms_cubic-bezier(0.4,0,0.2,1)_0ms] text-[1.7rem] fixed bottom-[20px] right-[20px] text-white p-[10px]
+}

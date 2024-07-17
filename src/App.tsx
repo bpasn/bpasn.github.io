@@ -7,6 +7,7 @@ import Experience from './components/Experience/Experience';
 import Contact from './components/Contact/Contact';
 import { DialogProvider } from './context/dialog-context';
 import MyDialog from './components/Project/components/DialogComponent';
+import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         {/* <SocialIcon /> */}
         <Experience />
         <Contact />
-        
+        <ScrollToTop />
+
       </Layout>
     </DialogProvider>
   );

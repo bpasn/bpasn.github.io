@@ -14,8 +14,8 @@ const Contact = () => {
   const contacts: IContact[] = [
     {
       "icon": MdOutlineMail,
-      "text": "pirunporn02@gmail.com",
-      "href": "mailto:pirunporn02@gmail.com"
+      "text": "pirunporn.aia@gmail.com",
+      "href": "mailto:pirunporn.aia@gmail.com"
     },
     {
       "icon": FiPhone,

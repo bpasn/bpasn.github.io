@@ -18,7 +18,7 @@ const Hero = () => {
               <TypeAnimation
                 cursor={false}
                 sequence={[
-                  "Hi, I'm Boy, a Full-Stack Developer.",
+                  "Hi, I'm Boy, a Junior Full-Stack Developer.",
                   () => setShowSubTitle(true)
                 ]}
                 speed={{ type: "keyStrokeDelayInMs", value: 100 }}
@@ -34,13 +34,7 @@ Here, you'll find detailed information about my experience, skills, and projects
                   500,
                   "Here, you'll find detailed information about my experience, skills, and projects.",
                   2000,
-                  "Uhh... you can scroll down to see my projects now...",
-                  1000,
-                  "You're uh...",
-                  1000,
-                  "You're uh... still here?",
-                  1000,
-                  "Ok, this has been fun, but I'm gonna restart the loop now...",
+                  "you can scroll down to see my projects now...",
                   1000,
                   "See ya! :)",
                   500,]}

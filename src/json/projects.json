@@ -2,7 +2,7 @@
     {
         "img": "/assets/project/buyer.png",
         "title": "Buyer web portal (Pttor)",
-        "description": "Delivery of electronic document data resulting from the sale service of oil via Fleet Card through an EDC card reader to the Revenue Department at a gas station service point",
+        "description": "เป็นบริการที่แยกออกมาจากตัวระบบหลัก (E-Tax) ที่จะให้บริการแก่ บริษัท ปตท. นํ้ามัน และการค้าปลีก จำกัด (มหาชน) (OR) ในการที่จะนำส่งข้อมูลใบกำกับภาษีอิเล็กทรอนิกส์และใบรับอิเล็กทรอนิกส์ (e-Tax invoice & e-Receipt) ทางด้าน Online ณ จุดบริการสถานีน้ำมันที่อยู่ภายใต้เครือข่ายของบริษัท OR และตัวแทนผู้จำหน่ายน้ำมัน (Dealer) เมื่อเกิดรายการขายน้ำมัน",
         "tech_stack": [
             "React",
             "NodeJs",
@@ -15,7 +15,7 @@
     {
         "img": "/assets/project/etax.jpg",
         "title": "E-Tax",
-        "description": "e-Tax Invoice and e-Receipt Platform This also provides services to KBANK, BAY, PCC, RBH, BBL, issuing electronic documents and confirming documents with electronic signatures, ",
+        "description": "ให้บริการ e-Tax Invoice & e-Receipt ซึ่งเป็นการออกใบกำกับภาษีและใบเสร็จรับเงินในรูปแบบอิเล็กทรอนิกส์ เป็นบริการที่ช่วยจัดทำและส่งมอบเอกสารภาษีในรูปแบบดิจิทัลได้สะดวกและปลอดภัย บริการ e-Tax Invoice & e-Receipt ให้บริการกับธนาคารกสิกรไทย (KBank), ธนาคารกรุงเทพ (BBL), ธนาคารกรุงศรีอยุธยา (BAY), และธนาคารธนชาตหรือทีเอ็มบีธนชาต (TBANK หรือ RBH) ช่วยในการอำนวยความสะดวกให้ธุรกิจสามารถจัดการเอกสารภาษีและใบเสร็จแบบดิจิทัลง่ายและปลอดภัย การส่งมอบข้อมูลที่เป็นไปตามมาตรฐานของกรมสรรพากรและหน่วยงานที่เกี่ยวข้อง",
         "tech_stack": [
             "HTML",
             "CSS",
@@ -33,7 +33,7 @@
     {
         "img": "/assets/project/sleasing.png",
         "title": "S-Leasing",
-        "description": "Download tax invoices and electronic receipts",
+        "description": "เป็นหน้าเว็บเพจที่จะให้ผู้ใช้ดาวน์โหลดใบกำกับภาษีและใบรับอิเล็กทรอนิกส์ที่จะได้รับจาก SMS ของระบบ E-Tax",
         "tech_stack": [
             "ReactJs",
             "NodeJs",
@@ -46,7 +46,7 @@
     {
         "img": "/assets/project/saypays-logo.png",
         "title": "SaypayPOS",
-        "description": "SayPays POS Point of Sale (POS) system for small to medium-sized businesses, where the software handles overall store management.",
+        "description": "เป็นระบบ POS ของ SayPays สำหรับธุรกิจขนาดเล็กถึงขนาดกลาง โดยที่ซอฟต์แวร์จะจัดการระบบของร้านค้าโดยรวมเช่น การนับสต๊อก การเพิ่มสินค้า Payment ออกใบเสร็จ สรุปรายงานการขาย ฯลฯ",
         "tech_stack": [
             "Flutter",
             "Provider"
@@ -57,7 +57,7 @@
     {
         "img": "/assets/image/image1.png",
         "title": "Plant Redcross",
-        "description": "The campaign encourages people to plant green forests in celebration of the 100th anniversary of the Thai Scouts, offering gifts to the land by uploading images and messages related to tree planting.",
+        "description": "เป็นโครงการของสภากาชาด จัดทำเพื่อเพิ่มพื้นที่สีเขียวในประเทศไทย เชิญชวน เยาวชนประชาชนทั่วไป ร่วมกันปลูกต้นไม้และลงทะเบียนต้นไม้ที่ปลูก สามารถติดตามการเติบโตของต้นไม้และแบ่งปันข้อมูลผ่านระบบออนไลน์",
         "tech_stack": [
             "VB.net",
             "CSS & HTML",

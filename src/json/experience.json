@@ -4,10 +4,11 @@
         "position": "Junior Full-Stack Developer",
         "company": "2J Solution and Services Co., Ltd.",
         "description": [
-            "Developed and maintained web applications using both front-end and back-end technologies",
-            "Collaborated with team members to troubleshoot issues and improve system performance",
-            "Created comprehensive plans to optimize and enhance working processes, improving efficiency and productivity.",
-            "Developed and modified programs to meet user needs and requirements, ensuring high functionality and usability.",
+            "Developed and maintained scalable web and mobile applications using React.js, Node.js, and Flutter.",
+            "Designed and implemented REST APIs to enhance application functionalities.",
+            "Collaborated with UI/UX designers to create seamless user experiences.",
+            "Conducted unit and integration testing to ensure software reliability and performance.",
+            "Improved application response time by optimizing database queries and front-end performance.",
             "Set up environment websites using OS Linux, including configuring ports and Nginx, to ensure accessibility in browsers.",
             "Led the mobile application development for the POS UI System on the SayPay Project using Flutter (Android and iOS), ensuring a seamless user experience across platforms."
         ],
@@ -18,9 +19,10 @@
         "position": "Junior Front-End Developer",
         "company": "Nippon Sysits Co., Ltd.",
         "description": [
-            "Developed client-specific web applications using VB.net to ensure all requirements were met, providing tailored solutions for diverse clients.",
-            "Designed and implemented exportable reports in Excel and various formats for enhanced data accessibility, streamlining client operations.",
-            "Coordinated closely with business development and project management teams to ensure on-time task completion, fostering effective teamwork and project success."
+            "Built and maintained responsive web applications using VB.NET, jQuery, Bootstrap, HTML, CSS, and JavaScript.",
+            "Optimized front-end components to enhance performance and user experience.",
+            "Integrated RESTful APIs to ensure smooth data retrieval and management.",
+            "Worked closely with cross-functional teams to deliver high-quality software products."
         ],
         "end": "2022"
     }
